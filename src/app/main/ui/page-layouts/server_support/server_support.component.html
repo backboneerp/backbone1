@@ -1,0 +1,112 @@
+<div class="page-layout simple"  style="text-align: left;padding: 20px;text-align: justify;">
+    
+        <h1 style="text-align: center;"><b>Server Support</b></h1>
+    
+       
+    <br />
+    <div style="text-align:justify;">
+            <h3><b>Server Deployment</b></h3>
+    <p>The Frappe team will setup or audit your installation based on your requirements depending on the best practices learned from hosting ERPNext since 2010. These include:
+    
+    </p>
+    <mat-list role="list">
+            <mat-list-item role="listitem"><img src="https://png.icons8.com/material/5/000000/filled-circle.png">&nbsp; DNS based multi-tenancy</mat-list-item>
+            <mat-list-item role="listitem"><img src="https://png.icons8.com/material/5/000000/filled-circle.png">&nbsp; Setting up of firewall</mat-list-item>
+            <mat-list-item role="listitem"><img src="https://png.icons8.com/material/5/000000/filled-circle.png">&nbsp; Setting up server security rules</mat-list-item>
+            <mat-list-item role="listitem"><img src="https://png.icons8.com/material/5/000000/filled-circle.png">&nbsp; Best practices at time of migration</mat-list-item>
+            <mat-list-item role="listitem"><img src="https://png.icons8.com/material/5/000000/filled-circle.png">&nbsp; Setup of domain and redirects</mat-list-item>
+            <mat-list-item role="listitem"><img src="https://png.icons8.com/material/5/000000/filled-circle.png">&nbsp; Setup of email service</mat-list-item>
+            <mat-list-item role="listitem"><img src="https://png.icons8.com/material/5/000000/filled-circle.png">&nbsp; Setup of uptime notification service like Uptime Robot</mat-list-item>
+          </mat-list>
+          
+          <br />
+          <br />
+          <h3><b>Setup of Master-Slave</b></h3>
+          <p >If 100% uptime is extremely important to your business, and there could be business losses even if the system is down for a day, we recommend that you setup a master-slave system.<br />
+    
+                In most cases, if some downtime / data loss is acceptable, a snapshot based backup system should be fine.<br />
+                
+                In a Master-Slave system, every query in the database is near-instantaneously executed in a parallel server (called slave). So if the main server (master) crashes, you can switch to the slave as the primary server within a few minutes. Also there is much less chance of a data loss.<br />
+                
+                In the regular snapshot system, you can only recover from the last available snapshot, which might be one day old.<br />
+                
+                To setup a master-slave system, you will need to provision two identical servers from your datacenter provider, Frappe team will help you setup a master-slave system once you have provisioned the server.</p>
+          
+                <br />
+                <h3><b>Upgrade Support</b></h3>
+                <p >Since ERPNext is 100% free and open source, every new release contains upgrade scripts that will automatically upgrade your system to the latest available version. Under this agreement you can choose to upgrade the system as many times as you want in the contract period. There is no additional cost or license associated with minor or major upgrades of the system. <br />
+    
+                        Frappe recommends that you deploy the latest version every 2-4 weeks. Security and performance updates are pushed continuously and it is best to be on the latest version. The cloud version of ERPNext is always on the latest release. <br />
+                        
+                        Upgrade support would include help incase an update breaks or due to:</p>
+                        <mat-list role="list">
+            <mat-list-item role="listitem"><img src="https://png.icons8.com/material/5/000000/filled-circle.png">&nbsp; Failing Patches</mat-list-item>
+            <mat-list-item role="listitem"><img src="https://png.icons8.com/material/5/000000/filled-circle.png">&nbsp; Slow Patches</mat-list-item>
+            <mat-list-item role="listitem"><img src="https://png.icons8.com/material/5/000000/filled-circle.png">&nbsp; Dependency Issues</mat-list-item>
+            </mat-list>
+            <p>When you require upgrade support, you will have to schedule an upgrade with the Frappe team so that someone is available to monitor your upgrade when something fails.</p>
+               
+                <br />
+    
+              
+                      <h3><b>Major Upgrades</b></h3>
+                <p >ERPNext upgrades do not usually affect the in-app customizations and permission rules, but this cannot be guaranteed, there may be edge cases where there might be some changes. At the time of major upgrade (example version 10 to version 11), Frappe recommends setting up a test instance to ensure minimum disruption due to customizations.<br />
+    
+                        During this time, Frappe team will also arrange a webinar or sessions which would be beneficial for your ERP champion to attend to understand the impact of new upgrades.</p>
+               
+                        <br />
+    
+              
+                        <h3><b>Bench Manager</b></h3>
+                  <p >We also recommend you install the “Bench Manager”. This is a user-interface driven tool to manage ERPNext Upgrade and backups. With Bench Manager, the ERP Champion or Frappe personnel can trigger an Update remotely without SSH access.
+                </p>
+    
+                <br />
+    
+              
+                <h3><b>Security Notifications</b></h3>
+          <p >Frappe will notify you if your current version has any severe security risks and if it needs to be updated immediately. Frappe will also help you in the migration and actively support to fix any issues that may arise.</p>
+    
+          <br />
+          <h3><b>Scaling Support</b></h3>
+          <p >As your data scales, some database queries will start becoming a bottleneck. You may need support to optimize your database or analyze how to improve the database performance.
+    
+               <br />
+                Scaling Support will include:</p>
+                  <mat-list role="list">
+      <mat-list-item role="listitem"><img src="https://png.icons8.com/material/5/000000/filled-circle.png">&nbsp; Identification of the bottleneck</mat-list-item>
+      <mat-list-item role="listitem"><img src="https://png.icons8.com/material/5/000000/filled-circle.png">&nbsp; Optimizing table indexes (if required)</mat-list-item>
+      <mat-list-item role="listitem"><img src="https://png.icons8.com/material/5/000000/filled-circle.png">&nbsp; Redesign of a feature implementation (if necessary)</mat-list-item>
+      </mat-list>
+      
+          <br />
+          <h3><b>Server Audit</b></h3>
+          <p> Frappe team will conduct an audit of your server from time to time to check the performance and health of your server and the implement any preventive maintenance measures including:</p>
+                  <mat-list role="list">
+      <mat-list-item role="listitem"><img src="https://png.icons8.com/material/5/000000/filled-circle.png">&nbsp; Log review and cleanup</mat-list-item>
+      <mat-list-item role="listitem"><img src="https://png.icons8.com/material/5/000000/filled-circle.png">&nbsp; Clearing disk space</mat-list-item>
+      <mat-list-item role="listitem"><img src="https://png.icons8.com/material/5/000000/filled-circle.png">&nbsp; Clear memory</mat-list-item>
+      </mat-list>
+      
+          <br />
+    
+    </div>  
+    
+        <div class="button-row" style="text-align: center" >
+                <button mat-flat-button color="primary" style="height: 40px;width: 160px"
+                routerLink="/ui/page-layouts/contact">Get in Touch 
+              </button>  
+        </div> 
+        <br /> <br />
+        <div style="text-align: center">
+                <p ><a  style="color:#36414c;text-align: center" routerLink="/pages/auth/login">Sign up for 30 days free trial</a></p>
+                </div>
+        
+       <!--footer-->
+    <br />
+    <br />
+    
+    <carded-fullwidth-2></carded-fullwidth-2>
+    <!--footer-->
+    </div>
+    
