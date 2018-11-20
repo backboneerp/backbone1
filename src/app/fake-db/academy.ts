@@ -572,13 +572,13 @@ export class AcademyFakeDb
     public static course = [
         {
             'id'         : '15459251a6d6b397565',
-            'title'      : 'Basics of Angular',
-            'slug'       : 'basics-of-angular',
+            'title'      : 'Society Management',
+            'slug'       : 'Society Management',
             'description': 'Commits that need to be pushed lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-            'category'   : 'web',
+            'category'   : 'Society Management',
             'length'     : 30,
             'totalSteps' : 11,
-            'updated'    : 'Jun 28, 2017',
+           
             'steps'      : AcademyFakeDb.demoSteps
         },
         {

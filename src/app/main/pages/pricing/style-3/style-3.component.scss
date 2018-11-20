@@ -33,6 +33,7 @@ pricing-style-3 {
                     @include media-breakpoint('xs') {
                         font-size: 32px;
                     }
+                    img{color:white;margin-top: 10px;}
                 }
 
                 .h3 {
@@ -82,12 +83,14 @@ pricing-style-3 {
                 .question {
                     font-size: 18px;
                     margin-bottom: 8px;
+                    font-weight: bold;
                 }
 
                 .answer {
                     font-size: 16px;
                     line-height: 1.5;
                     color: rgba(0, 0, 0, 0.54);
+                    text-align: justify;
                 }
             }
         }

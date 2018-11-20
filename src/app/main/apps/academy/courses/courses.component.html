@@ -6,11 +6,10 @@
         <div class="hero-text">
             <mat-icon class="hero-icon">school</mat-icon>
             <h1 [@animate]="{value:'*',params:{delay:'100ms', y:'25px'}}">
-                WELCOME TO ACADEMY
+                Master BackboneERP Basics
             </h1>
             <h3 [@animate]="{value:'*',params:{delay:'100ms', y:'25px'}}">
-                Our courses will step you through the process of building a small application, or adding a new feature
-                to an existing application.
+                These short videos will get you started with the product in a short time. 100% Recommended by users!
             </h3>
         </div>
 
@@ -25,15 +24,15 @@
             <div class="filters" fxLayout="column" fxLayoutAlign="center center"
                  fxLayout.gt-xs="row" fxLayoutAlign.gt-xs="space-between center">
 
-                <mat-form-field appearance="outline" floatLabel="always" class="course-search">
+               <!-- <mat-form-field appearance="outline" floatLabel="always" class="course-search">
                     <mat-label>Search for a course</mat-label>
                     <input matInput placeholder="Enter a keyword..."
                            [(ngModel)]="searchTerm"
                            (input)="filterCoursesByTerm()">
-                </mat-form-field>
+                </mat-form-field>-->
 
                 <mat-form-field appearance="outline" class="category-selector">
-                    <mat-label>Category</mat-label>
+                    <mat-label>Industry</mat-label>
                     <mat-select [(ngModel)]="currentCategory"
                                 (selectionChange)="filterCoursesByCategory()">
                         <mat-option [value]="'all'">

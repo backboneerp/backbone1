@@ -19,6 +19,7 @@ import { FakeDbService } from 'app/fake-db/fake-db.service';
 import { AppComponent } from 'app/app.component';
 import { AppStoreModule } from 'app/store/store.module';
 import { LayoutModule } from 'app/layout/layout.module';
+import {MatStepperModule} from '@angular/material/stepper';
 
 const appRoutes: Routes = [
     {
@@ -43,7 +44,7 @@ const appRoutes: Routes = [
     },
     {
         path      : '**',
-        redirectTo: '.\main\#ui\page-layouts\home',
+        redirectTo: '/ui/page-layouts/home'
     }
 ];
 
@@ -76,6 +77,7 @@ const appRoutes: Routes = [
         FuseSharedModule,
         FuseSidebarModule,
         FuseThemeOptionsModule,
+        MatStepperModule,
 
         // App modules
         LayoutModule,

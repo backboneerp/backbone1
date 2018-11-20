@@ -219,6 +219,20 @@ export const navigation: FuseNavigation[] = [
                 type : 'item',
                 url  : '/ui/page-layouts/agriculture',
             },
+            {
+                id   : 'style-3',
+                title: 'Style 3',
+                type : 'item',
+                url  : '/pages/pricing/style-3'
+            },
+            {
+                id       : 'academy',
+                title    : 'Academy',
+                translate: 'NAV.ACADEMY',
+                type     : 'item',
+                icon     : 'school',
+                url      : '/apps/academy'
+            },
            /* {
                 id      : 'authentication',
                 title   : 'Authentication',
@@ -384,12 +398,7 @@ export const navigation: FuseNavigation[] = [
                         type : 'item',
                         url  : '/pages/pricing/style-2'
                     },
-                    {
-                        id   : 'style-3',
-                        title: 'Style 3',
-                        type : 'item',
-                        url  : '/pages/pricing/style-3'
-                    }
+                   
                 ]
             },
             {
