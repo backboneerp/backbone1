@@ -916,28 +916,28 @@ export const navigation: FuseNavigation[] = [
                     }
                 ]
             }
-        ]*/
-    },
-    {
-        id   : 'about',
-        title: 'About Us',
-        type : 'item',
-        url  : '/ui/page-layouts/about'
-    },
-   /* {
-        id   : 'contact',
-        title: 'Contact',
-        type : 'item',
-        url  : '/ui/page-layouts/carded/full-width-1'
-    },*/
-    
-    {
-        id   : 'contact',
-        title: 'Contact',
-        type : 'item',
-        url  : '/ui/page-layouts/contact'
-    
-    },
+    ]*/
+},
+/*{
+    id   : 'about',
+    title: 'About Us',
+    type : 'item',
+    url  : '/ui/page-layouts/about'
+},
+ {
+    id   : 'contact',
+    title: 'Contact',
+    type : 'item',
+    url  : '/ui/page-layouts/carded/full-width-1'
+},*/
+{
+    id   : 'contact',
+    title: 'Contact',
+    type : 'item',
+    url  : '/ui/page-layouts/contact'
+
+},
+
   
     /*{
         id      : 'documentation',

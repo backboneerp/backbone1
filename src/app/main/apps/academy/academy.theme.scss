@@ -9,7 +9,8 @@
 
         .header {
             background: #1A237E;
-            background: linear-gradient(to right, #0E2A3B 0%, #34306B 100%);
+            background:  mat-color($mat-blue, 500);
+                        
 
             .hero-text {
 

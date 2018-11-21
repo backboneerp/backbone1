@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 import { FuseSidebarService } from '@fuse/components/sidebar/sidebar.service';
 
+
 @Component({
     selector   : 'learn',
     templateUrl: './learn.component.html',

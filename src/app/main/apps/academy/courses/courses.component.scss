@@ -113,6 +113,7 @@
                         height: 64px !important;
                         min-height: 64px !important;
                         max-height: 64px !important;
+                        background: mat-color($mat-green, 500);
 
                         &.web-bg {
                             background: mat-color($mat-blue, 500);
@@ -134,6 +135,7 @@
                             text-transform: capitalize;
                             text-align: left;
                             font-weight: 600;
+                         
                         }
 
                         .length {

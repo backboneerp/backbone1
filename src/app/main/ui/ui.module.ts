@@ -7,6 +7,7 @@ import { UITypographyModule } from 'app/main/ui/typography/typography.module';
 import { UIHelperClassesModule } from 'app/main/ui/helper-classes/helper-classes.module';
 import { UIPageLayoutsModule } from 'app/main/ui/page-layouts/page-layouts.module';
 import { UIColorsModule } from 'app/main/ui/colors/colors.module';
+import {MatStepperModule} from '@angular/material/stepper';
 
 @NgModule({
     imports: [
@@ -16,7 +17,8 @@ import { UIColorsModule } from 'app/main/ui/colors/colors.module';
         UITypographyModule,
         UIHelperClassesModule,
         UIPageLayoutsModule,
-        UIColorsModule
+        UIColorsModule,
+        MatStepperModule
     ]
 })
 export class UIModule

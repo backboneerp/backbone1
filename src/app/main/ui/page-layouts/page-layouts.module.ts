@@ -53,6 +53,7 @@ import { ManufacturingComponent } from './manufacturing/manufacturing.component'
 
 
 
+
 const routes: Routes = [
     
     // Carded
@@ -266,6 +267,7 @@ const routes: Routes = [
         Server_supportComponent,
         Functional_supportComponent,
         VideosComponent,
+        
         
         ServicesComponent,
         RetailComponent,
