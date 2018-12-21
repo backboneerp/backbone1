@@ -35,6 +35,7 @@
 
         .mat-tab-body-content {
             display: flex;
+            width:600px;
         }
 
         .mat-tab-label {
@@ -64,3 +65,4 @@
     }
 
 }
+.mat-tab-label{font-weight: bold;}

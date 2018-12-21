@@ -151,7 +151,7 @@ const routes: Routes = [
         path     : 'page-layouts/blank',
         component: BlankComponent
     },
-    //BackboneERP
+    //Encephalon
     {
         path     : 'page-layouts/home',
         component: HomeComponent

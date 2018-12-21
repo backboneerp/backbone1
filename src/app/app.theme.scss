@@ -53,6 +53,7 @@ $custom_palettes: (
     fuse-white: $fuse-white,
     fuse-black: $fuse-black,
     fuse-navy: $fuse-navy
+
 );
 
 @include fuse-color-classes($custom_palettes);

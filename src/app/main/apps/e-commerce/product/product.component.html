@@ -28,10 +28,10 @@
                         {{product.name}}
                     </div>
                     <div class="h2" *ngIf="pageType ==='new'">
-                        New Product
+                        New Society
                     </div>
                     <div class="subtitle secondary-text">
-                        <span>Product Detail</span>
+                        <span>Society Details</span>
                     </div>
                 </div>
             </div>
@@ -63,30 +63,32 @@
 
                     <mat-tab-group>
 
-                        <mat-tab label="Basic Info">
+                        <mat-tab label="Name">
 
                             <div class="tab-content p-24" fusePerfectScrollbar>
 
                                 <mat-form-field appearance="outline" floatLabel="always" class="w-100-p">
-                                    <mat-label>Product Name</mat-label>
-                                    <input matInput placeholder="Product Name"
+                                    <mat-label>Society Name</mat-label>
+                                    <input matInput
                                            name="name"
                                            formControlName="name"
                                            required>
                                 </mat-form-field>
 
                                 <mat-form-field appearance="outline" floatLabel="always" class="w-100-p">
-                                    <mat-label>Product Description</mat-label>
-                                    <textarea matInput placeholder="Product Description"
-                                              name="description"
-                                              formControlName="description"
-                                              rows="5">
-                                    </textarea>
+                                    <mat-label>State</mat-label>
+                                   
+                                    <select matNativeControl required formControlName="description">
+                                        <option value="Maharashtra">Maharashtra</option>
+                                        <option value="Karnataka">Karnataka</option>
+                                        <option value="Telangana">Telangana</option>
+                                        <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                      </select>
                                 </mat-form-field>
 
                                 <mat-form-field appearance="outline" floatLabel="always" class="w-100-p">
 
-                                    <mat-label>Categories</mat-label>
+                                    <mat-label>Registration no.</mat-label>
 
                                     <mat-chip-list #categoryList name="categories" formControlName="categories">
 
@@ -104,7 +106,7 @@
 
                                 </mat-form-field>
 
-                                <mat-form-field appearance="outline" floatLabel="always" class="w-100-p">
+                               <!--<mat-form-field appearance="outline" floatLabel="always" class="w-100-p">
 
                                     <mat-label>Tags</mat-label>
 
@@ -122,13 +124,13 @@
 
                                     </mat-chip-list>
 
-                                </mat-form-field>
+                                </mat-form-field>-->
 
                             </div>
 
                         </mat-tab>
 
-                        <mat-tab label="Product Images">
+                       <!-- <mat-tab label="Product Images">
 
                             <div class="tab-content p-24" fusePerfectScrollbar>
                                 <div fxLayout="row wrap" fxLayoutAlign="start start">
@@ -148,54 +150,90 @@
                                 </div>
                             </div>
 
-                        </mat-tab>
+                        </mat-tab>-->
 
-                        <mat-tab label="Pricing">
+                        <mat-tab label="Address">
 
                             <div class="tab-content p-24" fusePerfectScrollbar>
 
                                 <mat-form-field appearance="outline" floatLabel="always" class="w-100-p">
-                                    <mat-label>Tax Excluded Price</mat-label>
-                                    <input matInput placeholder="Tax Excluded Price"
+                                    <mat-label>Name/House No.</mat-label>
+                                    <input matInput 
                                            name="priceTaxExcl"
                                            formControlName="priceTaxExcl"
-                                           type="number">
-                                    <span matPrefix>$&nbsp;</span>
+                                           >
+                                    
                                 </mat-form-field>
 
                                 <mat-form-field appearance="outline" floatLabel="always" class="w-100-p">
-                                    <mat-label>Tax Included Price</mat-label>
-                                    <input matInput placeholder="Tax Included Price"
+                                    <mat-label>Street 1</mat-label>
+                                    <input matInput 
                                            name="priceTaxIncl"
                                            formControlName="priceTaxIncl"
-                                           type="number">
-                                    <span matPrefix>$&nbsp;</span>
+                                           >
+                                   
                                 </mat-form-field>
 
                                 <mat-form-field appearance="outline" floatLabel="always" class="w-100-p">
-                                    <mat-label>Tax Rate</mat-label>
-                                    <input matInput placeholder="Tax Rate"
+                                    <mat-label>Street 2</mat-label>
+                                    <input matInput 
                                            name="taxRate"
                                            formControlName="taxRate"
-                                           type="number">
-                                    <span matPrefix>&#37;&nbsp;</span>
+                                           >
+                                   
                                 </mat-form-field>
 
                                 <mat-form-field appearance="outline" floatLabel="always" class="w-100-p">
-                                    <mat-label>Compared Price</mat-label>
-                                    <input matInput placeholder="Compared Price"
+                                    <mat-label>Landmark</mat-label>
+                                    <input matInput 
                                            name="comparedPrice"
                                            formControlName="comparedPrice"
-                                           type="number">
-                                    <span matPrefix>$&nbsp;</span>
-                                    <mat-hint align="start">Add a compare price to show next to the real price
-                                    </mat-hint>
+                                           >
+                                  
+                                </mat-form-field>
+                                <mat-form-field appearance="outline" floatLabel="always" class="w-100-p">
+                                    <mat-label>Area</mat-label>
+                                    <input matInput 
+                                           name="taxRate"
+                                           formControlName="taxRate"
+                                          >
+                                   
+                                </mat-form-field>
+                                <mat-form-field appearance="outline"  floatLabel="always" class="w-100-p">
+                                    <mat-label>Select City</mat-label>
+                                   
+                                    <select matNativeControl  formControlName="description">
+                                        <option value="Maharashtra">Maharashtra</option>
+                                        <option value="Karnataka">Karnataka</option>
+                                        <option value="Telangana">Telangana</option>
+                                        <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                      </select>
+                                </mat-form-field>
+                                <mat-form-field appearance="outline"  floatLabel="always" class="w-100-p">
+                                    <mat-label>Select State</mat-label>
+                                   
+                                    <select matNativeControl formControlName="description">
+                                        <option value="Maharashtra">Maharashtra</option>
+                                        <option value="Karnataka">Karnataka</option>
+                                        <option value="Telangana">Telangana</option>
+                                        <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                      </select>
+                                </mat-form-field>
+                              
+
+                                <mat-form-field appearance="outline" floatLabel="always" class="w-100-p">
+                                    <mat-label>Pincode</mat-label>
+                                    <input matInput 
+                                           name="taxRate"
+                                           formControlName="taxRate"
+                                          >
+                                   
                                 </mat-form-field>
 
                             </div>
                         </mat-tab>
 
-                        <mat-tab label="Inventory">
+                        <!--<mat-tab label="Inventory">
 
                             <div class="tab-content p-24" fusePerfectScrollbar>
 
@@ -269,7 +307,7 @@
 
                             </div>
 
-                        </mat-tab>
+                        </mat-tab>-->
 
                     </mat-tab-group>
 

@@ -233,6 +233,20 @@ export const navigation: FuseNavigation[] = [
                 icon     : 'school',
                 url      : '/apps/academy'
             },
+            {  id        : 'products',
+            title     : 'Authentication',
+            type      : 'item',
+            url       : '/apps/e-commerce/products',
+            exactMatch: true
+        },
+        {
+            id       : 'scrumboard',
+            title    : 'Scrumboard',
+            translate: 'NAV.SCRUMBOARD',
+            type     : 'item',
+            icon     : 'assessment',
+            url      : '/apps/scrumboard'
+        },
            /* {
                 id      : 'authentication',
                 title   : 'Authentication',
@@ -438,9 +452,15 @@ export const navigation: FuseNavigation[] = [
         url     :'/ui/page-layouts/pricing'
     },
     {
+        id      : 'learn',
+        title   : 'Learn',
+        type    : 'item',
+        url  : '/ui/page-layouts/learn'
+    },
+    {
         id      : 'support',
         title   : 'Support',
-        type    : 'group',
+        type    : 'item',
         url     :'/ui/page-layouts/support',
        /* children: [
             {
@@ -652,12 +672,12 @@ export const navigation: FuseNavigation[] = [
         ]*/
     },
     
-    {
-        id      : 'learn',
+   /* {
+       id      : 'learn',
         title   : 'Learn',
         type    : 'group',
-        url  : '/ui/page-layouts/learn',
-      /*  children: [
+      /*  url  : '/ui/page-layouts/learn',
+                 children: [
             {
                 id      : 'form-controls',
                 title   : 'Form Controls',
@@ -719,8 +739,8 @@ export const navigation: FuseNavigation[] = [
                         url  : '/angular-material-elements/slide-toggle'
                     }
                 ]
-            },
-            {
+            },*/
+           /* {
                 id      : 'navigation',
                 title   : 'Navigation',
                 type    : 'collapsable',
@@ -916,8 +936,8 @@ export const navigation: FuseNavigation[] = [
                     }
                 ]
             }
-    ]*/
-},
+    ]
+},*/
 /*{
     id   : 'about',
     title: 'About Us',
@@ -937,6 +957,12 @@ export const navigation: FuseNavigation[] = [
     url  : '/ui/page-layouts/contact'
 
 },
+{
+    id   : 'blank',
+    title: 'Products',
+    type : 'item',
+    url  : '/ui/page-layouts/blank'
+}
 
   
     /*{
