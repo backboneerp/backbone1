@@ -50,6 +50,8 @@ import { Non_profitComponent } from 'app/main/ui/page-layouts/non_profit/non_pro
 import { FuseSidebarModule } from '@fuse/components';
 import { ProfileAboutComponent } from 'app/main/pages/profile/tabs/about/about.component';
 import { ManufacturingComponent } from './manufacturing/manufacturing.component';
+import { SocietyComponent } from 'app/main/ui/page-layouts/society/society.component';
+
 
 
 
@@ -228,6 +230,11 @@ const routes: Routes = [
         path     : 'page-layouts/non_profit',
         component: Non_profitComponent
     },
+    {
+        path     : 'page-layouts/society',
+        component: SocietyComponent
+    },
+  
 ];
 
 @NgModule({
@@ -276,6 +283,8 @@ const routes: Routes = [
         AgricultureComponent,
         ManufacturingComponent,
         DistributionComponent,
+        SocietyComponent,
+      
 
     
        

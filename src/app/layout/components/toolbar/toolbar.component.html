@@ -1,6 +1,11 @@
 <mat-toolbar class="p-0 mat-elevation-z1">
+        <div class="logo ml-16">
+                <!--<img class="logo-icon" src="assets/images/logos/fuse.svg">-->
+                <h1 style="color:#266fe2;font-family: arial;font-size: 26px;">ENCEPHALON</h1>
+            </div>
 
     <div fxFlex fxFill fxLayout="row" fxLayoutAlign="start center">
+           
 
         <div fxFlex="1 0 auto" fxLayout="row" fxLayoutAlign="start center">
 
@@ -9,18 +14,18 @@
                 <mat-icon class="secondary-text">menu</mat-icon>
             </button>
 
-            <div class="toolbar-separator" *ngIf="!hiddenNavbar && !rightNavbar" fxHide.gt-md></div>
+           
 
             <div fxLayout="row" fxLayoutAlign="start center" *ngIf="horizontalNavbar">
                 <div class="logo ml-16">
                     <!--<img class="logo-icon" src="assets/images/logos/fuse.svg">-->
-                    <h1 style="color:#266fe2;font-family: arial;font-size: 36px;">ENCEPHALON</h1>
+                    <h1 style="color:#266fe2;font-family: arial;font-size: 26px;">ENCEPHALON</h1>
                 </div>
             </div>
 
-           <div class="px-8 px-md-16">
+          <!--<div class="px-8 px-md-16">
                 <fuse-shortcuts [navigation]="navigation"></fuse-shortcuts>
-            </div>
+            </div>-->
 
         </div>
 

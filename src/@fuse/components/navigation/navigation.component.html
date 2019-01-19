@@ -17,7 +17,7 @@
 
     <!-- Horizontal Navigation Layout -->
     <ng-container *ngIf="layout === 'horizontal'">
-
+           
         <ng-container *ngFor="let item of navigation">
 
             <fuse-nav-horizontal-collapsable *ngIf="item.type=='group'" [item]="item"></fuse-nav-horizontal-collapsable>

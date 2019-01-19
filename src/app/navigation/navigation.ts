@@ -164,6 +164,7 @@ export const navigation: FuseNavigation[] = [
             }
         ]
     },*/
+    
     {
         id   : 'home',
         title: 'Home',
@@ -172,11 +173,24 @@ export const navigation: FuseNavigation[] = [
     
     },
     {
+        id   : 'society',
+        title: 'Society Managenent',
+        type : 'item',
+        url  : '/apps/e-commerce/products',
+    },
+    /*{
         id      : 'pages',
         title   : 'Industries',
         type    : 'group',
        
         children: [
+            {
+                id   : 'society',
+                title: 'Society Managenent',
+                type : 'item',
+                url  : '/ui/page-layouts/society',
+            },
+
             {
                 id   : 'education',
                 title: 'Education',
@@ -247,7 +261,7 @@ export const navigation: FuseNavigation[] = [
             icon     : 'assessment',
             url      : '/apps/scrumboard'
         },
-           /* {
+            {
                 id      : 'authentication',
                 title   : 'Authentication',
                 type    : 'collapsable',
@@ -442,9 +456,9 @@ export const navigation: FuseNavigation[] = [
                 type : 'item',
                 icon : 'import_contacts',
                 url  : '/pages/knowledge-base'
-            }*/
+            }
         ]
-    },
+    },*/
     {
         id      : 'pricing',
         title   : 'Pricing',
@@ -452,12 +466,26 @@ export const navigation: FuseNavigation[] = [
         url     :'/ui/page-layouts/pricing'
     },
     {
+    id      : 'support',
+    title   : 'Support',
+    type    : 'item',
+    url     :'/ui/page-layouts/support'
+    },
+    {
+        id   : 'contact',
+        title: 'Contact',
+        type : 'item',
+        url  : '/ui/page-layouts/contact'
+    
+    },
+    
+   /* {
         id      : 'learn',
         title   : 'Learn',
         type    : 'item',
         url  : '/ui/page-layouts/learn'
-    },
-    {
+    },*/
+   /* {
         id      : 'support',
         title   : 'Support',
         type    : 'item',
@@ -669,8 +697,8 @@ export const navigation: FuseNavigation[] = [
                 icon : 'color_lens',
                 url  : '/ui/colors'
             }
-        ]*/
-    },
+        ]
+    },*/
     
    /* {
        id      : 'learn',
@@ -950,18 +978,19 @@ export const navigation: FuseNavigation[] = [
     type : 'item',
     url  : '/ui/page-layouts/carded/full-width-1'
 },*/
-{
-    id   : 'contact',
-    title: 'Contact',
-    type : 'item',
-    url  : '/ui/page-layouts/contact'
 
+
+{
+    id   : 'blank',
+    title: 'Sign In',
+    type : 'item',
+    url  : '/pages/auth/login'
 },
 {
     id   : 'blank',
-    title: 'Products',
+    title: 'Sign Up',
     type : 'item',
-    url  : '/ui/page-layouts/blank'
+    url  : '/pages/auth/register'
 }
 
   

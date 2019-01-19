@@ -1,11 +1,12 @@
+
 <div id="login" fxLayout="column">
 
     <div id="login-form-wrapper" fxLayout="column" fxLayoutAlign="center center">
 
         <div id="login-form" [@animate]="{value:'*',params:{duration:'300ms',y:'100px'}}">
 
-            <div class="logo">
-                <img src="assets/images/logos/fuse.svg">
+            <div>
+                    <h1 style="color:#266fe2;font-family: arial;font-size: 26px;">ENCEPHALON</h1>
             </div>
 
             <div class="title">LOGIN TO YOUR ACCOUNT</div>
@@ -46,7 +47,7 @@
                     </a>
                 </div>
 
-                <button mat-raised-button color="accent" class="submit-button" aria-label="LOG IN"
+                <button mat-raised-button color="accent" class="submit-button" aria-label="LOG IN" routerLink="/ui/page-layouts/society"
                         [disabled]="loginForm.invalid">
                     LOGIN
                 </button>
@@ -75,3 +76,6 @@
     </div>
 
 </div>
+
+
+
