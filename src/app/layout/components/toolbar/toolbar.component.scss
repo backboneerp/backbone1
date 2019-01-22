@@ -31,20 +31,20 @@ toolbar {
     .chat-panel-toggle-button,
     .quick-panel-toggle-button {
         min-width: 64px;
-        height: 64px;
+        height: 40px;
 
         @include media-breakpoint('xs') {
-            height: 56px;
+            height: 40px;
         }
     }
 
     .navbar-toggle-button {
         min-width: 56px;
-        height: 56px;
+        height: 40px;
     }
 
     .toolbar-separator {
-        height: 64px;
+        height: 40px;
         width: 1px;
 
         @include media-breakpoint('xs') {

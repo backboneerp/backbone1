@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {MatButtonModule,MatTabsModule,MatToolbarModule,MatMenuModule,MatDividerModule,MatIconModule,MatListModule,MatFormFieldModule,MatExpansionModule,MatGridListModule,MatCardModule, MatInputModule} from '@angular/material';
+import {MatButtonModule,MatTabsModule,MatToolbarModule,MatMenuModule,MatDividerModule,MatIconModule,MatListModule,MatFormFieldModule,MatExpansionModule,MatGridListModule,MatCardModule, MatCheckboxModule,MatInputModule} from '@angular/material';
 
 import { FuseSharedModule } from '@fuse/shared.module';
 import { FuseDemoModule } from '@fuse/components/demo/demo.module';
@@ -51,8 +51,9 @@ import { FuseSidebarModule } from '@fuse/components';
 import { ProfileAboutComponent } from 'app/main/pages/profile/tabs/about/about.component';
 import { ManufacturingComponent } from './manufacturing/manufacturing.component';
 import { SocietyComponent } from 'app/main/ui/page-layouts/society/society.component';
-
-
+import { LoginComponent } from 'app/main/ui/page-layouts/login/login.component';
+import { RegisterComponent } from 'app/main/ui/page-layouts/register/register.component';
+import { Smart_societyComponent } from 'app/main/ui/page-layouts/smart_society/smart_society.component';
 
 
 
@@ -234,6 +235,18 @@ const routes: Routes = [
         path     : 'page-layouts/society',
         component: SocietyComponent
     },
+    {
+        path     : 'page-layouts/sign_in',
+        component: LoginComponent
+    },
+    {
+        path     : 'page-layouts/register',
+        component: RegisterComponent
+    },
+    {
+        path     : 'page-layouts/smart_society',
+        component: Smart_societyComponent
+    },
   
 ];
 
@@ -284,6 +297,9 @@ const routes: Routes = [
         ManufacturingComponent,
         DistributionComponent,
         SocietyComponent,
+        LoginComponent,
+        RegisterComponent,
+        Smart_societyComponent,
       
 
     
@@ -308,6 +324,7 @@ const routes: Routes = [
         MatCardModule,
         MatFormFieldModule,
         MatInputModule,
+        MatCheckboxModule,
 
         FuseSidebarModule,
         FuseSharedModule,

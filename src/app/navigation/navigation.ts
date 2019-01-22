@@ -172,26 +172,29 @@ export const navigation: FuseNavigation[] = [
         url  : '/ui/page-layouts/home'
     
     },
+    
     {
-        id   : 'society',
-        title: 'Society Managenent',
-        type : 'item',
-        url  : '/apps/e-commerce/products',
-    },
-    /*{
         id      : 'pages',
-        title   : 'Industries',
+        title   : 'Products',
         type    : 'group',
        
         children: [
             {
                 id   : 'society',
-                title: 'Society Managenent',
-                type : 'item',
-                url  : '/ui/page-layouts/society',
+                title: 'ERP',
+                type : 'group',
+                children:[
+                    {
+                        id   : 'society',
+                        title: 'Smart Society',
+                        type : 'item',
+                        url  : '/ui/page-layouts/smart_society',
+                    },
+                ]
+                
             },
 
-            {
+           /* {
                 id   : 'education',
                 title: 'Education',
                 type : 'item',
@@ -456,15 +459,10 @@ export const navigation: FuseNavigation[] = [
                 type : 'item',
                 icon : 'import_contacts',
                 url  : '/pages/knowledge-base'
-            }
+            }*/
         ]
-    },*/
-    {
-        id      : 'pricing',
-        title   : 'Pricing',
-        type    : 'item',
-        url     :'/ui/page-layouts/pricing'
     },
+   
     {
     id      : 'support',
     title   : 'Support',
@@ -984,13 +982,13 @@ export const navigation: FuseNavigation[] = [
     id   : 'blank',
     title: 'Sign In',
     type : 'item',
-    url  : '/pages/auth/login'
+    url  : '/ui/page-layouts/sign_in'
 },
 {
     id   : 'blank',
     title: 'Sign Up',
     type : 'item',
-    url  : '/pages/auth/register'
+    url  : '/ui/page-layouts/register'
 }
 
   
