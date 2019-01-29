@@ -8,6 +8,7 @@ import { UIHelperClassesModule } from 'app/main/ui/helper-classes/helper-classes
 import { UIPageLayoutsModule } from 'app/main/ui/page-layouts/page-layouts.module';
 import { UIColorsModule } from 'app/main/ui/colors/colors.module';
 import {MatStepperModule} from '@angular/material/stepper';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 @NgModule({
     imports: [
@@ -18,7 +19,8 @@ import {MatStepperModule} from '@angular/material/stepper';
         UIHelperClassesModule,
         UIPageLayoutsModule,
         UIColorsModule,
-        MatStepperModule
+        MatStepperModule,
+        MatFormFieldModule
     ]
 })
 export class UIModule

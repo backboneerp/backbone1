@@ -13,6 +13,7 @@ import { FuseModule } from '@fuse/fuse.module';
 import { FuseSharedModule } from '@fuse/shared.module';
 import { FuseProgressBarModule, FuseSidebarModule, FuseThemeOptionsModule } from '@fuse/components';
 
+
 import { fuseConfig } from 'app/fuse-config';
 
 import { FakeDbService } from 'app/fake-db/fake-db.service';
@@ -20,6 +21,8 @@ import { AppComponent } from 'app/app.component';
 import { AppStoreModule } from 'app/store/store.module';
 import { LayoutModule } from 'app/layout/layout.module';
 import {MatStepperModule} from '@angular/material/stepper';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
 
 const appRoutes: Routes = [
     {
@@ -70,6 +73,7 @@ const appRoutes: Routes = [
         // Material
         MatButtonModule,
         MatIconModule,
+        MatFormFieldModule,
 
         // Fuse modules
         FuseModule.forRoot(fuseConfig),
@@ -78,6 +82,7 @@ const appRoutes: Routes = [
         FuseSidebarModule,
         FuseThemeOptionsModule,
         MatStepperModule,
+        MatInputModule,
 
         // App modules
         LayoutModule,

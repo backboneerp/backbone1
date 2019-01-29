@@ -172,7 +172,26 @@ export const navigation: FuseNavigation[] = [
         url  : '/ui/page-layouts/home'
     
     },
-    
+
+   
+    {
+        id        : 'add_building',
+        title     : 'Add',
+        type      : 'item',
+        url       : '/ui/page-layouts/add_building',
+    },
+    {
+        id        : 'domain',
+        title     : 'Domain',
+        type      : 'item',
+        url       : '/ui/page-layouts/domain',
+    },
+    {
+        id        : 'member',
+        title     : 'Add Member',
+        type      : 'item',
+        url       : '/ui/page-layouts/member',
+    },
     {
         id      : 'pages',
         title   : 'Products',

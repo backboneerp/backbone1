@@ -14,6 +14,8 @@ import { fuseAnimations } from '@fuse/animations';
 export class LoginComponent implements OnInit
 {
     loginForm: FormGroup;
+    firstFormGroup: FormGroup;
+    secondFormGroup: FormGroup;
 
     /**
      * Constructor
@@ -30,10 +32,10 @@ export class LoginComponent implements OnInit
         this._fuseConfigService.config = {
             layout: {
                 navbar   : {
-                    hidden: true
+                    hidden: false
                 },
                 toolbar  : {
-                    hidden: true
+                    hidden: false
                 },
                 footer   : {
                     hidden: true
@@ -58,5 +60,11 @@ export class LoginComponent implements OnInit
             email   : ['', [Validators.required, Validators.email]],
             password: ['', Validators.required]
         });
+        this.firstFormGroup = this._formBuilder.group({
+            firstCtrl: ['', Validators.required]
+          });
+          this.secondFormGroup = this._formBuilder.group({
+            secondCtrl: ['', Validators.required]
+          }); 
     }
 }

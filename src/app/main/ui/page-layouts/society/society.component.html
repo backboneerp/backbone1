@@ -1,330 +1,325 @@
-<div class="page-layout blank p-24" fusePerfectScrollbar   >
+<div class="page-layout blank p-24" fusePerfectScrollbar  style="  background-image: url('assets/back.jpeg');opacity:0.8;">
 
+        <div id="example" style="background-color:transperant;color:white;border: white;" appearance="outline">
+            
+               
+
+                <form class="example-form">
+
+                        <mat-form-field class="example-full-width" [ngStyle]="{'font-size.px':10}">
+                                <mat-icon matPreffix>search</mat-icon>
+                          <input matInput placeholder="search....">
+                         
+                        </mat-form-field>
+                        
+                      </form>
+                      
   
-    <div class="menu-bg" style="padding-right:100px;padding-left: 100px;">
-            <mat-grid-list cols="6" >
+    <div class="menu-bg" >
+            <mat-grid-list cols="7" >
+                        <mat-vertical-stepper>
+                                        <mat-step [stepControl]="firstFormGroup">
                     <mat-grid-tile>
         <a routerLink="/apps/e-commerce/products" routerLinkActive="active">
-                <div class="menu-icon">
-                        <img src="https://img.icons8.com/color/40/000000/user.png">
-                </div>
-        <div class="menu-text">
-                      
-            Smart<br /> Profile
-        </div>
-        </a>
+              
+                        <img src="assets/icon/pro.png"> 
+           <p>Profile</p>
+              </a>
         </mat-grid-tile>
         <mat-grid-tile>
         <a routerLink="/pages/auth/login" routerLinkActive="active">
-            <div class="menu-icon">
-                <img src="https://img.icons8.com/color/40/000000/speed.png">
+            
+                <img src="assets/icon/safari.png">
                
-            </div>
-            <div class="menu-text">
-                Smart<br /> Dashboard
-            </div>
+           
+                <p>Dashboard</p>
+            
             </a>
             </mat-grid-tile>
             <mat-grid-tile>
             <a routerLink="{{society_management_url}}" routerLinkActive="active">
-                <div class="menu-icon">
-                        <img src="https://img.icons8.com/color/40/000000/home.png">
+               
+                        <img src="assets/icon/house.png">
                        
-                </div>
-                <div class="menu-text">
-                Smart<br /> home
-                </div>
+                <p> home</p>
+              
                 </a>
              </mat-grid-tile>
              <mat-grid-tile>
                 <a routerLink="{{society_management_url}}" routerLinkActive="active">
-                <div class="menu-icon">
-                <img src="https://img.icons8.com/color/40/000000/policeman-male.png">
+              
+                <img src="assets/icon/appstore.png">
                           
-                </div>
-                <div class="menu-text">
-                Smart<br />Gatekeeper
-                </div>
+              <p> App Store</p>
+              
                 </a>
               </mat-grid-tile>
               <mat-grid-tile>
                 <a routerLink="{{society_management_url}}" routerLinkActive="active">
-                <div class="menu-icon">
-                <img src="https://img.icons8.com/color/40/000000/user-group-man-man.png">
+                
+                <img src="assets/icons/iconfinder_goa-account-msn_79748.png">
                               
-                </div>
-                  <div class="menu-text">
-                  Smart <br />Visitor
-                   </div>
+               <p>Visitor</p>
+                  
                    </a>
              </mat-grid-tile>
              <mat-grid-tile>
                 <a routerLink="{{society_management_url}}" routerLinkActive="active">
-                <div class="menu-icon">
-                        <img src="https://img.icons8.com/color/40/000000/positive-dynamic.png">
+               
+                        <img src="assets/icons/Oxygen-icon.org-Oxygen-Apps-preferences-desktop-user-password.ico">
                            
-                </div>
-                <div class="menu-text">
-                Smart<br /> Account
-                </div>
+<p>Account</p>
+              
+                </a>
+        </mat-grid-tile>
+        <mat-grid-tile>
+                <a routerLink="{{society_management_url}}" routerLinkActive="active">
+               
+                        <img src="assets/icon/calculator.png">
+                           
+<p>Calulator</p>
+              
                 </a>
         </mat-grid-tile>
 
         <mat-grid-tile>
                 <a routerLink="{{society_management_url}}" routerLinkActive="active">
-                <div class="menu-icon">
-                        <img src="https://img.icons8.com/color/40/000000/open-box.png">
+               
+                        <img src="assets/icons/iconfinder_kthememgr_7240.png">
                                                                                    
-                </div>
-                <div class="menu-text">
-                Smart<br />Inventory
-                 </div>
+              <p> Inventory</p>
+               
                 </a>
         </mat-grid-tile>
         <mat-grid-tile>
                 <a routerLink="{{society_management_url}}" routerLinkActive="active">
-                <div class="menu-icon">
-                        <img src="https://img.icons8.com/color/40/000000/traffic-jam.png">
+                
+                        <img src="assets/icons/iconfinder_parking-parking_sign-architecture_and_city-automobile-signs-sign_4059963.png">
                                                                                   
-                </div>
-                <div class="menu-text">
-                 Smart<br />Parking
-                </div>
+               <p>Parking</p>
+               
                 </a>
         </mat-grid-tile>
         <mat-grid-tile>
                 <a routerLink="{{society_management_url}}" routerLinkActive="active">
-                <div class="menu-icon">
-                        <img src="https://img.icons8.com/color/40/000000/contact-card.png">
-                                                                                                                               </div>
-                <div class="menu-text">
-                 Smart<br />Contact
-                 </div>
+              
+                        <img src="assets/icon/contacts.png">
+                                                                                                                               
+               <p>Contacts</p>
+               
                  </a>
         </mat-grid-tile>
         <mat-grid-tile>
                 <a routerLink="/apps/e-commerce/products" routerLinkActive="active">
-                <div class="menu-icon">
-                        <img src="https://img.icons8.com/color/40/000000/help.png">
-                                                                                                                                </div>
-                <div class="menu-text">
-                Smart<br /> Helpdesk
-                </div>
+               
+                        <img src="assets/icons/iconfinder_assistant_7056.png">
+                                                                                                                                
+                <p>Helpdesk</p>
+                
                 </a>
         </mat-grid-tile>
         <mat-grid-tile>
                 <a routerLink="/pages/auth/login" routerLinkActive="active">
-                <div class="menu-icon">
-                                <img src="https://img.icons8.com/color/40/000000/communication.png">
+                
+                                <img src="assets/icons/iconfinder_chat_87417.png">
                            
-                </div>
-                <div class="menu-text">
-                 Smart<br /> Chatbot
-                </div>
+              
+               
+                <p> Chatbot</p>
+              
                  </a>
         </mat-grid-tile>
         <mat-grid-tile>
                 <a routerLink="{{society_management_url}}" routerLinkActive="active">
-                <div class="menu-icon">
-                                <img src="https://img.icons8.com/color/40/000000/meeting-room.png">
+                
+                                <img src="assets/icons/iconfinder_Group_Meeting_Light_80844.png">
                                            
-                 </div>
-                <div class="menu-text">
-                Smart<br /> Meetings
-                </div>
+               <p> Meetings</p>
+              
                 </a>
         </mat-grid-tile>
         <mat-grid-tile>
                 <a routerLink="{{society_management_url}}" routerLinkActive="active">
-                <div class="menu-icon">
-                                <img src="https://img.icons8.com/color/40/000000/to-do.png">
+                
+                                <img src="assets/icons/iconfinder_Checklist_clipboard_inventory_list_report_tasks_todo_1886533.png">
                                                  
-                </div>
-                <div class="menu-text">
-                Smart<br /> Noticeboard
-                </div>
+                 <p>Noticeboard</p>
+               
                </a>
         </mat-grid-tile>
         <mat-grid-tile>
                         <a routerLink="{{society_management_url}}" routerLinkActive="active">
-                        <div class="menu-icon">
-                                        <img src="https://img.icons8.com/color/40/000000/multi-edit.png">
+                        
+                                        <img src="assets/folder document2.ico">
                                                          
-                        </div>
-                        <div class="menu-text">
-                        Smart<br /> Document
-                        </div>
+                        
+                       
+                       <p> Document</p>
+                      
                        </a>
         </mat-grid-tile>
         <mat-grid-tile>
                         <a routerLink="{{society_management_url}}" routerLinkActive="active">
-                        <div class="menu-icon">
-                                        <img src="https://img.icons8.com/color/40/000000/conference.png">
+                        
+                                        <img src="assets/users.ico">
                                                          
-                        </div>
-                        <div class="menu-text">
-                        Smart<br /> Member
-                        </div>
+                      
+                       
+                       <p> Members</p>
+                      
                        </a>
         </mat-grid-tile>
         <mat-grid-tile>
                         <a routerLink="{{society_management_url}}" routerLinkActive="active">
-                        <div class="menu-icon">
-                                        <img src="https://img.icons8.com/color/40/000000/conference-background-selected.png">
+                        
+                                        <img src="assets/icons/iconfinder_group_2431357.png">
                                                          
-                        </div>
-                        <div class="menu-text">
-                        Smart<br /> HR
-                        </div>
+                     
+                       
+                       <p> HR</p>
+                      
                        </a>
         </mat-grid-tile> 
         <mat-grid-tile>
                         <a routerLink="{{society_management_url}}" routerLinkActive="active">
-                        <div class="menu-icon">
-                                        <img src="https://img.icons8.com/color/40/000000/administrator-female.png">
+                        
+                                        <img src="assets/icons/iconfinder_telephone-24-7-customer-support_532791.png">
                                                          
-                        </div>
-                        <div class="menu-text">
-                        Smart<br /> Assistant
-                        </div>
+                   
+                       
+                        <p>Assistance</p>
+                     
                        </a>
         </mat-grid-tile>
         <mat-grid-tile>
                         <a routerLink="{{society_management_url}}" routerLinkActive="active">
-                        <div class="menu-icon">
-                                        <img src="https://img.icons8.com/color/40/000000/task.png">
+                        
+                                        <img src="assets/desktop file.ico">
                                                          
-                        </div>
-                        <div class="menu-text">
-                        Smart<br />Task
-                        </div>
+                        
+                       
+                       <p>Task</p>
+                      
                        </a>
         </mat-grid-tile>
         <mat-grid-tile>
                         <a routerLink="{{society_management_url}}" routerLinkActive="active">
-                        <div class="menu-icon">
-                                        <img src="https://img.icons8.com/color/40/000000/calendar-plus.png">
+                        
+                                        <img src="assets/icon/calendar.png">
                                                          
-                        </div>
-                        <div class="menu-text">
-                        Smart<br /> Calender
-                        </div>
+                                          
+                       <p> Calendar</p>
+                        
                        </a>
         </mat-grid-tile>
         <mat-grid-tile>
                         <a routerLink="{{society_management_url}}" routerLinkActive="active">
-                        <div class="menu-icon">
-                                        <img src="https://img.icons8.com/color/40/000000/sell-property.png">
+                        
+                                        <img src="assets/icons/iconfinder_property_47411.png">
                                                          
-                        </div>
-                        <div class="menu-text">
-                        Smart<br /> Asset and Property
-                        </div>
+                        
+                       
+                       <p> Asset and Property</p>
+                       </a>
+        </mat-grid-tile>
+        </mat-step>
+      
+                        <mat-step [stepControl]="secondFormGroup">
+        <mat-grid-tile>
+                        <a routerLink="{{society_management_url}}" routerLinkActive="active">
+                        
+                                        <img src="assets/icons/iconfinder_bar_chart_17217.png">
+                                                         
+                       
+                       
+                      <p>  CRM</p>
+                      
                        </a>
         </mat-grid-tile>
         <mat-grid-tile>
                         <a routerLink="{{society_management_url}}" routerLinkActive="active">
-                        <div class="menu-icon">
-                                        <img src="https://img.icons8.com/color/40/000000/sellsy.png">
+                        
+                                        <img src="assets/icons/iconfinder_calendar_44974.png">
                                                          
-                        </div>
-                        <div class="menu-text">
-                        Smart<br /> CRM
-                        </div>
+                        
+                       
+                      <p>  Event</p>
+                      
                        </a>
         </mat-grid-tile>
         <mat-grid-tile>
                         <a routerLink="{{society_management_url}}" routerLinkActive="active">
-                        <div class="menu-icon">
-                                        <img src="https://img.icons8.com/color/40/000000/park-concert-shell.png">
+                        
+                                        <img src="assets/icons/iconfinder_H_sign_hospital_hospital_sign_hospital__medical__road_sign_1887039.png">
                                                          
-                        </div>
-                        <div class="menu-text">
-                        Smart<br /> Event
-                        </div>
+                       
+                       <p> Facility</p>
+                       
                        </a>
         </mat-grid-tile>
         <mat-grid-tile>
                         <a routerLink="{{society_management_url}}" routerLinkActive="active">
-                        <div class="menu-icon">
-                                        <img src="https://img.icons8.com/color/40/000000/hospital-2.png">
+                        
+                                        <img src="assets/icons/iconfinder_User Purple_41330.png">
                                                          
-                        </div>
-                        <div class="menu-text">
-                        Smart<br /> Facility
-                        </div>
-                       </a>
-        </mat-grid-tile>
-        <mat-grid-tile>
-                        <a routerLink="{{society_management_url}}" routerLinkActive="active">
-                        <div class="menu-icon">
-                                        <img src="https://img.icons8.com/color/40/000000/user-female-circle.png">
-                                                         
-                        </div>
-                        <div class="menu-text">
-                        Smart<br /> User
-                        </div>
+                      
+                       
+                       <p> User</p>
+                      
                        </a>
         </mat-grid-tile> 
         <mat-grid-tile>
                         <a routerLink="{{society_management_url}}" routerLinkActive="active">
-                        <div class="menu-icon">
-                                        <img src="https://img.icons8.com/color/40/000000/e-learning.png">
-                        </div>
-                        <div class="menu-text">
-                        Smart<br /> Learning
-                        </div>
+                        
+                                        <img src="assets/icons/iconfinder_My-Computer_35477.png">
+                      
+                       
+                       <p> Learning</p>
+                       
                        </a>
         </mat-grid-tile>
         <mat-grid-tile>
                         <a routerLink="{{society_management_url}}" routerLinkActive="active">
-                        <div class="menu-icon">
-                                        <img src="https://img.icons8.com/color/40/000000/appointment-reminders.png">
+                        
+                                        <img src="assets/icon/reminders.png">
                                                          
-                        </div>
-                        <div class="menu-text">
-                        Smart<br /> Reminder
-                        </div>
+                      
+                       
+                        <p>Reminder</p>
+                       
                        </a>
         </mat-grid-tile> 
         <mat-grid-tile>
                         <a routerLink="{{society_management_url}}" routerLinkActive="active">
-                        <div class="menu-icon">
-                                        <img src="https://img.icons8.com/color/40/000000/services.png">
+                        
+                                        <img src="assets/icon/systempreferences.png">
                                                          
-                        </div>
-                        <div class="menu-text">
-                        Smart<br /> Setting
-                        </div>
+                       
+                        <p>Setting</p>
+                      
                        </a>
         </mat-grid-tile>
         <mat-grid-tile>
                         <a routerLink="{{society_management_url}}" routerLinkActive="active">
-                        <div class="menu-icon">
-                                        <img src="https://img.icons8.com/color/40/000000/business-report.png">
-                        </div>
-                        <div class="menu-text">
-                        Smart<br /> Report
-                        </div>
+                        
+                                        <img src="assets/icon/notes.png">
+                      
+                        <p>Report</p>
+                     
                        </a>
         </mat-grid-tile>                      
-                                                                                                                            
+                      </mat-step>
+                      </mat-vertical-stepper>                                                                                                      
                                                                                                                                                                                                                                                                                                                                                                  
                     </mat-grid-list>
     </div>
     
-    <br /> <br />
-    <div class="button-row" style="text-align: center;">
-        <button mat-flat-button color="primary"  routerLink="/pages/auth/login">Sign up for 30 days free trial
-      </button>  
-</div> 
+   
+   
     
-   <!--footer-->
-<br />
-<br />
+  
 
-<footer></footer>
-<!--footer-->
+
 
            
 </div>

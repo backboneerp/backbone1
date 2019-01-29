@@ -4,7 +4,7 @@ register {
 
     #register {
         width: 100%;
-        background-color: white;
+      background-color: white;
         background-size: cover;
 
         #register-form-wrapper {
@@ -12,13 +12,13 @@ register {
             padding: 32px;
 
             @include media-breakpoint('xs') {
-                padding: 16px;
+                padding: 10px;
             }
 
             #register-form {
-                width: 384px;
-                max-width: 384px;
-                padding: 32px;
+                width: 500px;
+               
+                padding: 50px;
                 text-align: center;
                 @include mat-elevation(16);
 
@@ -40,9 +40,12 @@ register {
                 form {
                     width: 100%;
                     text-align: left;
+                    
 
                     mat-form-field {
                         width: 100%;
+
+                    input {height: -10px;}
                     }
 
                     mat-checkbox {
@@ -63,6 +66,8 @@ register {
                         margin: 16px auto;
                         display: block;
 
+                        text-align: center;
+
                         @include media-breakpoint('xs') {
                             width: 90%;
                         }
@@ -75,6 +80,7 @@ register {
 
                     .text {
                         margin-right: 8px;
+                    
                     }
                 }
 
@@ -112,7 +118,7 @@ register {
                 }
 
                 button {
-
+text-align: center;
                     &.google,
                     &.facebook {
                         width: 192px;
@@ -137,4 +143,19 @@ register {
             }
         }
     }
+
+    .mat-horizontal-stepper-header{
+        display: none !important;
+    }
+        .mat-horizontal-stepper-header-container{
+            display: none !important;
+    }
 }
+.example-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .example-container > * {
+    width: 100%;
+  }

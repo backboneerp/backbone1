@@ -4,30 +4,32 @@
 <!--header-->
 
 <div class="page-layout simple" >
-  <mat-grid-list cols="2" rowHeight="800px" >
-          <mat-grid-tile style="padding-bottom: 200px;">
-                  <div style="padding-left: 100px;padding-bottom: 100px;">
+  <mat-grid-list cols="2" rowHeight="600px" >
+          <mat-grid-tile style="padding-bottom: 50px;">
+                  <div style="padding-left: 100px;">
               <h1><b>Write To Us</b></h1>
            
              <p>Have a question or comment?  Write in, we would love to hear from you. We’ll write back as soon as we can.</p>
 <form>
-                      <h4> Subject: </h4>
-                      <mat-form-field  class="example-full-width" appearance="outline">
-                    
+                      
+                      <mat-form-field  class="example-full-width" appearance="outline" [ngStyle]="{'font-size.px': 12}">
+                        <mat-label>Subject</mat-label> 
                         <input matInput>
                         
                       </mat-form-field>
                     
                          
-                          <h4> Your Email : </h4>
+                         
                     
-                          <mat-form-field class="example-full-width" appearance="outline" >
-                                  <input matInput  [formControl]="emailFormControl">
+                          <mat-form-field class="example-full-width" appearance="outline"  [ngStyle]="{'font-size.px': 12}">
+                            <mat-label>Your Email</mat-label>    
+                            <input matInput  [formControl]="emailFormControl">
                                   
                           </mat-form-field>
-                          <h4> Message: </h4>
-                          <mat-form-field class="example-full-width" appearance="outline" >
-                                  <textarea matInput></textarea>
+                          
+                          <mat-form-field class="example-full-width" appearance="outline" [ngStyle]="{'font-size.px': 12}">
+                            <mat-label>Enquiry</mat-label>     
+                            <textarea matInput></textarea>
                                 </mat-form-field>
                                 
                                 <div class="button-row" style="margin-left: 100px;">
@@ -41,7 +43,7 @@
           </mat-grid-tile>
 
           <mat-grid-tile>
-            <div style="padding-bottom: 400px;">
+            <div style="margin-top:-100px">
               <h1> <b>Visit Our Office</b></h1>
              <h3> <address>Manisha Blitz,<br/>2nd Floor, Office no. 102,<br />Above Fotofast, near Shankar Math,<br/>Vaidu-wadi,Hadapsar 28, <br />Pune, Maharashtra-411028 , India
               </address></h3><br />

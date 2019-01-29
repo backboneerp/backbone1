@@ -4,4 +4,4 @@
 // Import app.theme.scss
 @import "app/app.theme";
 
-body{background-color: white;}
+@import "~ng-pick-datetime/assets/style/picker.min.css";

@@ -1,9 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {MatButtonModule,MatTabsModule,MatToolbarModule,MatMenuModule,MatDividerModule,MatIconModule,MatListModule,MatFormFieldModule,MatExpansionModule,MatGridListModule,MatCardModule, MatCheckboxModule,MatInputModule} from '@angular/material';
+import {MatButtonModule,MatTabsModule,MatToolbarModule,MatMenuModule,MatDividerModule,MatIconModule,MatListModule,MatExpansionModule,MatGridListModule,MatCardModule, MatCheckboxModule,MatInputModule} from '@angular/material';
 
 import { FuseSharedModule } from '@fuse/shared.module';
 import { FuseDemoModule } from '@fuse/components/demo/demo.module';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatStepperModule} from '@angular/material/stepper';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 import { CardedFullWidth1Component } from 'app/main/ui/page-layouts/carded/full-width-1/full-width-1.component';
 import { CardedFullWidth2Component } from 'app/main/ui/page-layouts/carded/full-width-2/full-width-2.component';
@@ -54,7 +57,9 @@ import { SocietyComponent } from 'app/main/ui/page-layouts/society/society.compo
 import { LoginComponent } from 'app/main/ui/page-layouts/login/login.component';
 import { RegisterComponent } from 'app/main/ui/page-layouts/register/register.component';
 import { Smart_societyComponent } from 'app/main/ui/page-layouts/smart_society/smart_society.component';
-
+import { Add_buildingComponent } from 'app/main/ui/page-layouts/add_building/add_building.component';
+import { DomainComponent } from 'app/main/ui/page-layouts/domain/domain.component';
+import { MemberComponent } from 'app/main/ui/page-layouts/member/member.component';
 
 
 const routes: Routes = [
@@ -247,7 +252,18 @@ const routes: Routes = [
         path     : 'page-layouts/smart_society',
         component: Smart_societyComponent
     },
-  
+    {
+        path     : 'page-layouts/add_building',
+        component: Add_buildingComponent
+    },
+    {
+        path     : 'page-layouts/domain',
+        component: DomainComponent
+    },
+    {
+        path     : 'page-layouts/member',
+        component: MemberComponent
+    },
 ];
 
 @NgModule({
@@ -300,6 +316,9 @@ const routes: Routes = [
         LoginComponent,
         RegisterComponent,
         Smart_societyComponent,
+        Add_buildingComponent,
+        DomainComponent,
+        MemberComponent
       
 
     
@@ -311,6 +330,8 @@ const routes: Routes = [
         RouterModule.forChild(routes),
 
         MatButtonModule,
+        MatDatepickerModule,
+        MatStepperModule,
         MatIconModule,
         MatTabsModule,
         MatCardModule,
@@ -328,7 +349,8 @@ const routes: Routes = [
 
         FuseSidebarModule,
         FuseSharedModule,
-        FuseDemoModule
+        FuseDemoModule,
+
     ]
 })
 export class UIPageLayoutsModule

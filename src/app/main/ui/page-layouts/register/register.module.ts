@@ -5,6 +5,7 @@ import { MatButtonModule, MatCheckboxModule, MatFormFieldModule, MatIconModule, 
 import { FuseSharedModule } from '@fuse/shared.module';
 
 import { RegisterComponent } from 'app/main/ui/page-layouts/register/register.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 const routes = [
     {
@@ -16,6 +17,8 @@ const routes = [
 @NgModule({
     declarations: [
         RegisterComponent
+       
+        
     ],
     imports     : [
         RouterModule.forChild(routes),
@@ -26,8 +29,10 @@ const routes = [
         MatIconModule,
         MatInputModule,
 
-        FuseSharedModule
-    ]
+        FuseSharedModule,
+        
+    ],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class RegisterModule
 {

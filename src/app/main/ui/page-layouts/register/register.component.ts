@@ -17,6 +17,9 @@ import { FuseSidebarService } from '@fuse/components/sidebar/sidebar.service';
 export class RegisterComponent implements OnInit, OnDestroy
 {
     registerForm: FormGroup;
+    firstFormGroup: FormGroup;
+    secondFormGroup: FormGroup;
+    
 
     // Private
     private _unsubscribeAll: Subject<any>;
@@ -31,10 +34,10 @@ export class RegisterComponent implements OnInit, OnDestroy
         this._fuseConfigService.config = {
             layout: {
                 navbar   : {
-                    hidden: true
+                    hidden: false
                 },
                 toolbar  : {
-                    hidden: true
+                    hidden: false
                 },
                 footer   : {
                     hidden: true
@@ -47,6 +50,7 @@ export class RegisterComponent implements OnInit, OnDestroy
 
         // Set the private defaults
         this._unsubscribeAll = new Subject();
+        
     }
 
     // -----------------------------------------------------------------------------------------------------
@@ -72,6 +76,12 @@ export class RegisterComponent implements OnInit, OnDestroy
             .subscribe(() => {
                 this.registerForm.get('passwordConfirm').updateValueAndValidity();
             });
+            this.firstFormGroup = this._formBuilder.group({
+                firstCtrl: ['', Validators.required]
+              });
+              this.secondFormGroup = this._formBuilder.group({
+                secondCtrl: ['', Validators.required]
+              }); 
     }
 
     /**
@@ -117,4 +127,6 @@ export const confirmPasswordValidator: ValidatorFn = (control: AbstractControl):
     }
 
     return {'passwordsNotMatching': true};
+    
 };
+export class FormFieldOverviewExample {}

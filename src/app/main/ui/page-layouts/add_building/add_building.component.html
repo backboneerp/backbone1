@@ -1,0 +1,89 @@
+<div id="add_building" style="text-align: center;" >
+
+    <div id="register-form-wrapper"  fxLayoutAlign="center center">
+
+        <div id="register-form" [@animate]="{value:'*',params:{duration:'300ms',y:'100px'}}">
+
+                <div>
+                        <h1 style="color:#266fe2;font-family: arial;font-size: 26px;">ENCEPHALON</h1>
+                </div>
+
+            <div class="title">Add New Building</div>
+
+           
+            <mat-horizontal-stepper>
+                <mat-step [stepControl]="firstFormGroup">
+                  <form [formGroup]="firstFormGroup">
+                    <mat-form-field appearance="outline" [ngStyle]="{'font-size.px': 12}">
+                        <input matInput placeholder="Name of Building" formControlName="firstCtrl" required>
+                        
+                       
+                      </mat-form-field>
+                      <mat-form-field appearance="outline" [ngStyle]="{'font-size.px': 12}">
+                        
+                        <input matInput placeholder="No. of Flats" formControlName="firstCtrl" required>
+                        
+                        
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" [ngStyle]="{'font-size.px': 12}">
+                        
+                        <input matInput placeholder="No. of Parking Lots" formControlName="firstCtrl" required>
+                        
+                        
+                    </mat-form-field>
+                  
+                    <div>
+                   
+                      <button mat-raised-button matStepperNext class="submit-button">Next</button>
+                    
+                                </div>
+                  </form>
+                </mat-step>
+                <mat-step [stepControl]="secondFormGroup">
+                  <form [formGroup]="secondFormGroup">
+                   
+                    <mat-form-field appearance="outline" [ngStyle]="{'font-size.px': 12}">
+                        
+                        <input matInput placeholder="Flats Occupied" formControlName="firstCtrl" required>
+                        
+                        
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" [ngStyle]="{'font-size.px': 12}">
+                        
+                        <input matInput placeholder="Flats Rented Out" formControlName="firstCtrl" required>
+                        
+                        
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" [ngStyle]="{'font-size.px': 12}">
+                        
+                        <input matInput placeholder="Flats Empty" formControlName="firstCtrl" required>
+                        
+                        
+                    </mat-form-field>
+                   
+                   
+    
+                  
+                   
+                  </form>
+                </mat-step>
+               
+              </mat-horizontal-stepper>
+
+              <mat-grid-list cols="3" rowHeight="2:1">
+                <mat-grid-tile>
+                    <button mat-raised-button  class="submit-button">Submit</button>
+                </mat-grid-tile>
+                <mat-grid-tile> 
+                    <button mat-raised-button  class="submit-button">Cancel</button></mat-grid-tile>
+                <mat-grid-tile>
+                        <button mat-button (click)="stepper.reset()">Reset</button>
+                </mat-grid-tile>
+               
+              </mat-grid-list>
+
+        </div>
+
+    </div>
+
+</div>

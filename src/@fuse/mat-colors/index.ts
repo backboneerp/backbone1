@@ -1,4 +1,4 @@
-const black87 = 'rgba(black, 0.87)';
+const black87 = 'rgba(black, 0)';
 const white87 = 'rgba(white, 0.87)';
 const black12 = 'rgba(black, 0.12)';
 const white12 = 'rgba(white, 0.12)';

@@ -16,9 +16,9 @@ login {
             }
 
             #login-form {
-                width: 384px;
-                max-width: 384px;
-                padding: 32px;
+                width: 500px;
+              
+                padding: 50px;
                 text-align: center;
                 @include mat-elevation(16);
 
@@ -144,4 +144,18 @@ login {
             }
         }
     }
+    .mat-horizontal-stepper-header{
+        display: none !important;
+    }
+        .mat-horizontal-stepper-header-container{
+            display: none !important;
+    }
 }
+.example-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .example-container > * {
+    width: 100%;
+  }

@@ -90,6 +90,9 @@ $carded-header-height-without-toolbar: $carded-header-height - $carded-toolbar-h
 .page-layout {
     position: relative;
     overflow: hidden;
+    color:black;
+    background-color:white;
+   
 
     // Carded layout
     &.carded {

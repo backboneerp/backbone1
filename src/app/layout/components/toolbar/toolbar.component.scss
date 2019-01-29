@@ -6,6 +6,7 @@ toolbar {
     flex: 0 0 auto;
     z-index: 4;
 
+
     &.below {
         z-index: 2;
     }
@@ -14,6 +15,7 @@ toolbar {
         position: relative;
         background: inherit !important;
         color: inherit !important;
+        height: 40px;
     }
 
     .logo {
@@ -46,6 +48,7 @@ toolbar {
     .toolbar-separator {
         height: 40px;
         width: 1px;
+        
 
         @include media-breakpoint('xs') {
             height: 40px;
