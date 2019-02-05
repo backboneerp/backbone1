@@ -4,6 +4,7 @@ import { DataSource } from '@angular/cdk/collections';
 import { BehaviorSubject, fromEvent, merge, Observable, Subject } from 'rxjs';
 import { debounceTime, distinctUntilChanged, map } from 'rxjs/operators';
 
+
 import { fuseAnimations } from '@fuse/animations';
 import { FuseUtils } from '@fuse/utils';
 
@@ -20,7 +21,7 @@ import { takeUntil } from 'rxjs/internal/operators';
 export class EcommerceProductsComponent implements OnInit
 {
     dataSource: FilesDataSource | null;
-    displayedColumns = ['id','name', 'category', ];
+    displayedColumns = ['id','name','block','flat','mobile','owner','email','edit','view','delete','member' ];
 
     @ViewChild(MatPaginator)
     paginator: MatPaginator;
@@ -30,7 +31,7 @@ export class EcommerceProductsComponent implements OnInit
 
     @ViewChild('filter')
     filter: ElementRef;
-
+   
     // Private
     private _unsubscribeAll: Subject<any>;
 
@@ -51,7 +52,7 @@ export class EcommerceProductsComponent implements OnInit
      */
     ngOnInit(): void
     {
-        this.dataSource = new FilesDataSource(this._ecommerceProductsService, this.paginator, this.sort);
+        this.dataSource = new FilesDataSource(this._ecommerceProductsService, this.paginator, this.sort,);
 
         fromEvent(this.filter.nativeElement, 'keyup')
             .pipe(
@@ -85,12 +86,15 @@ export class FilesDataSource extends DataSource<any>
     constructor(
         private _ecommerceProductsService: EcommerceProductsService,
         private _matPaginator: MatPaginator,
-        private _matSort: MatSort
+        private _matSort: MatSort,
+       
     )
+    
     {
         super();
 
         this.filteredData = this._ecommerceProductsService.products;
+       
     }
 
     /**

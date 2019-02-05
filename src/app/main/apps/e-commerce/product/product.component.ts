@@ -10,6 +10,7 @@ import { FuseUtils } from '@fuse/utils';
 
 import { Product } from 'app/main/apps/e-commerce/product/product.model';
 import { EcommerceProductService } from 'app/main/apps/e-commerce/product/product.service';
+import { FuseConfigService } from '@fuse/services/config.service';
 
 @Component({
     selector     : 'e-commerce-product',
@@ -23,6 +24,8 @@ export class EcommerceProductComponent implements OnInit, OnDestroy
     product: Product;
     pageType: string;
     productForm: FormGroup;
+    status: string;
+    marital_status: string[] = ['Male', 'Female',];
 
     // Private
     private _unsubscribeAll: Subject<any>;
@@ -39,7 +42,8 @@ export class EcommerceProductComponent implements OnInit, OnDestroy
         private _ecommerceProductService: EcommerceProductService,
         private _formBuilder: FormBuilder,
         private _location: Location,
-        private _matSnackBar: MatSnackBar
+        private _matSnackBar: MatSnackBar,
+        private _fuseConfigService: FuseConfigService,
     )
     {
         // Set the default
@@ -47,6 +51,22 @@ export class EcommerceProductComponent implements OnInit, OnDestroy
 
         // Set the private defaults
         this._unsubscribeAll = new Subject();
+        this._fuseConfigService.config = {
+            layout: {
+                navbar   : {
+                    hidden: true
+                },
+                toolbar  : {
+                    hidden: false
+                },
+                footer   : {
+                    hidden: true
+                },
+                sidepanel: {
+                    hidden: true
+                }
+            }
+        };
     }
 
     // -----------------------------------------------------------------------------------------------------
@@ -118,7 +138,9 @@ export class EcommerceProductComponent implements OnInit, OnDestroy
             depth           : [this.product.depth],
             weight          : [this.product.weight],
             extraShippingFee: [this.product.extraShippingFee],
-            active          : [this.product.active]
+            active          : [this.product.active],
+            block            : [this.product.name],
+
         });
     }
 
@@ -137,7 +159,7 @@ export class EcommerceProductComponent implements OnInit, OnDestroy
                 this._ecommerceProductService.onProductChanged.next(data);
 
                 // Show the success message
-                this._matSnackBar.open('Product saved', 'OK', {
+                this._matSnackBar.open('New Resident saved', 'OK', {
                     verticalPosition: 'top',
                     duration        : 2000
                 });
@@ -159,7 +181,7 @@ export class EcommerceProductComponent implements OnInit, OnDestroy
                 this._ecommerceProductService.onProductChanged.next(data);
 
                 // Show the success message
-                this._matSnackBar.open('Product added', 'OK', {
+                this._matSnackBar.open(' New Resident added', 'OK', {
                     verticalPosition: 'top',
                     duration        : 2000
                 });

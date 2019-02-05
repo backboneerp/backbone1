@@ -1,24 +1,14 @@
-<div class="page-layout blank p-24" fusePerfectScrollbar  style="  background-image: url('assets/back.jpeg');opacity:0.8;">
+<div class="page-layout blank p-24" fusePerfectScrollbar  style="  background-image: url('assets/bagr.jpeg');opacity:0.7;background-size: cover;">
 
         <div id="example" style="background-color:transperant;color:white;border: white;" appearance="outline">
-            
-               
-
-                <form class="example-form">
-
-                        <mat-form-field class="example-full-width" [ngStyle]="{'font-size.px':10}">
-                                <mat-icon matPreffix>search</mat-icon>
-                          <input matInput placeholder="search....">
-                         
-                        </mat-form-field>
-                        
-                      </form>
                       
+               
+<br />
+             
   
     <div class="menu-bg" >
-            <mat-grid-list cols="7" >
-                        <mat-vertical-stepper>
-                                        <mat-step [stepControl]="firstFormGroup">
+            <mat-grid-list cols="7" rowHeight="120px"  style="margin-left: 130px;margin-right: 130px;">
+                       
                     <mat-grid-tile>
         <a routerLink="/apps/e-commerce/products" routerLinkActive="active">
               
@@ -66,7 +56,7 @@
              <mat-grid-tile>
                 <a routerLink="{{society_management_url}}" routerLinkActive="active">
                
-                        <img src="assets/icons/Oxygen-icon.org-Oxygen-Apps-preferences-desktop-user-password.ico">
+                        <img src="https://img.icons8.com/color/256/000000/merchant-account.png">
                            
 <p>Account</p>
               
@@ -118,7 +108,7 @@
                 
                 </a>
         </mat-grid-tile>
-        <mat-grid-tile>
+        <!--<mat-grid-tile>
                 <a routerLink="/pages/auth/login" routerLinkActive="active">
                 
                                 <img src="assets/icons/iconfinder_chat_87417.png">
@@ -128,7 +118,7 @@
                 <p> Chatbot</p>
               
                  </a>
-        </mat-grid-tile>
+        </mat-grid-tile>-->
         <mat-grid-tile>
                 <a routerLink="{{society_management_url}}" routerLinkActive="active">
                 
@@ -159,13 +149,13 @@
                        </a>
         </mat-grid-tile>
         <mat-grid-tile>
-                        <a routerLink="{{society_management_url}}" routerLinkActive="active">
+                        <a routerLink="/apps/e-commerce/products" routerLinkActive="active">
                         
                                         <img src="assets/users.ico">
                                                          
                       
                        
-                       <p> Members</p>
+                       <p> Resident</p>
                       
                        </a>
         </mat-grid-tile>
@@ -222,9 +212,7 @@
                        <p> Asset and Property</p>
                        </a>
         </mat-grid-tile>
-        </mat-step>
       
-                        <mat-step [stepControl]="secondFormGroup">
         <mat-grid-tile>
                         <a routerLink="{{society_management_url}}" routerLinkActive="active">
                         
@@ -308,8 +296,7 @@
                      
                        </a>
         </mat-grid-tile>                      
-                      </mat-step>
-                      </mat-vertical-stepper>                                                                                                      
+                                                                                                                         
                                                                                                                                                                                                                                                                                                                                                                  
                     </mat-grid-list>
     </div>

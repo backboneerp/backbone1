@@ -173,25 +173,13 @@ export const navigation: FuseNavigation[] = [
     
     },
 
+    // {  id        : 'products',
+    //         title     : 'Authentication',
+    //         type      : 'item',
+    //         url       : '/apps/e-commerce/products',
+    //         exactMatch: true
+    //     },
    
-    {
-        id        : 'add_building',
-        title     : 'Add',
-        type      : 'item',
-        url       : '/ui/page-layouts/add_building',
-    },
-    {
-        id        : 'domain',
-        title     : 'Domain',
-        type      : 'item',
-        url       : '/ui/page-layouts/domain',
-    },
-    {
-        id        : 'member',
-        title     : 'Add Member',
-        type      : 'item',
-        url       : '/ui/page-layouts/member',
-    },
     {
         id      : 'pages',
         title   : 'Products',
@@ -495,6 +483,19 @@ export const navigation: FuseNavigation[] = [
         url  : '/ui/page-layouts/contact'
     
     },
+    {
+        id   : 'login',
+        title: 'Sign In',
+        type : 'item',
+        url  : '/ui/page-layouts/login'
+    },
+    {
+        id   : 'register',
+        title: 'Sign Up',
+        type : 'item',
+        url  : '/ui/page-layouts/register'
+    }
+    
     
    /* {
         id      : 'learn',
@@ -997,18 +998,6 @@ export const navigation: FuseNavigation[] = [
 },*/
 
 
-{
-    id   : 'blank',
-    title: 'Sign In',
-    type : 'item',
-    url  : '/ui/page-layouts/sign_in'
-},
-{
-    id   : 'blank',
-    title: 'Sign Up',
-    type : 'item',
-    url  : '/ui/page-layouts/register'
-}
 
   
     /*{

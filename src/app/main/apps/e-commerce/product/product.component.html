@@ -28,11 +28,9 @@
                         {{product.name}}
                     </div>
                     <div class="h2" *ngIf="pageType ==='new'">
-                        New Society
+                        New Resident
                     </div>
-                    <div class="subtitle secondary-text">
-                        <span>Society Details</span>
-                    </div>
+                    
                 </div>
             </div>
             <!-- / APP TITLE -->
@@ -63,68 +61,133 @@
 
                     <mat-tab-group>
 
-                        <mat-tab label="Name">
+                        <mat-tab label="Personal Details">
 
                             <div class="tab-content p-24" fusePerfectScrollbar>
-
-                                <mat-form-field appearance="outline" floatLabel="always" class="w-100-p">
-                                    <mat-label>Society Name</mat-label>
+                                <mat-form-field appearance="outline" floatLabel="always" class="w-100-p" [ngStyle]="{'font-size.px': 12}">
+                                    <mat-label>Image</mat-label>
+                                    <input matInput
+                                           name="image"
+                                           formControlName="image"
+                                           required>
+                                </mat-form-field>
+                                <mat-form-field appearance="outline" floatLabel="always" class="w-100-p" [ngStyle]="{'font-size.px': 12}">
+                                   <mat-label>Name</mat-label>
                                     <input matInput
                                            name="name"
                                            formControlName="name"
                                            required>
                                 </mat-form-field>
-
-                                <mat-form-field appearance="outline" floatLabel="always" class="w-100-p">
-                                    <mat-label>State</mat-label>
-                                   
-                                    <select matNativeControl required formControlName="description">
-                                        <option value="Maharashtra">Maharashtra</option>
-                                        <option value="Karnataka">Karnataka</option>
-                                        <option value="Telangana">Telangana</option>
-                                        <option value="Madhya Pradesh">Madhya Pradesh</option>
-                                      </select>
-                                </mat-form-field>
-
-                                <mat-form-field appearance="outline" floatLabel="always" class="w-100-p">
-
-                                    <mat-label>Registration no.</mat-label>
-
-                                    <mat-chip-list #categoryList name="categories" formControlName="categories">
-
-                                        <mat-chip *ngFor="let category of product.categories"
-                                                  [removable]="true" (removed)="product.removeCategory(category)">
-                                            {{category}}
-                                            <mat-icon matChipRemove>cancel</mat-icon>
-                                        </mat-chip>
-
-                                        <input [matChipInputFor]="categoryList"
-                                               [matChipInputAddOnBlur]="true"
-                                               (matChipInputTokenEnd)="product.addCategory($event)"/>
-
-                                    </mat-chip-list>
-
-                                </mat-form-field>
-
-                               <!--<mat-form-field appearance="outline" floatLabel="always" class="w-100-p">
-
-                                    <mat-label>Tags</mat-label>
-
-                                    <mat-chip-list #tagList name="tags" formControlName="tags">
-
-                                        <mat-chip *ngFor="let tag of product.tags"
-                                                  [removable]="true" (removed)="product.removeTag(tag)">
-                                            {{tag}}
-                                            <mat-icon matChipRemove>cancel</mat-icon>
-                                        </mat-chip>
-
-                                        <input [matChipInputFor]="tagList"
-                                               [matChipInputAddOnBlur]="true"
-                                               (matChipInputTokenEnd)="product.addTag($event)"/>
-
-                                    </mat-chip-list>
-
-                                </mat-form-field>-->
+                                <!-- <mat-form-field appearance="outline" floatLabel="always" class="w-100-p" [ngStyle]="{'font-size.px': 12}">
+                                    <mat-label>Marital Status</mat-label>
+                                    <mat-radio-group class="example-radio-group" [(ngModel)]="status">
+                                            <mat-radio-button class="example-radio-button" *ngFor="marital status" [value]="marital_status">
+                                              {{status}}
+                                            </mat-radio-button>
+                                          </mat-radio-group>
+                                         
+                                          
+                                </mat-form-field> -->
+                              
+                                <!-- <mat-form-field appearance="outline" floatLabel="always" class="w-100-p" [ngStyle]="{'font-size.px': 12}">
+                                    <mat-label>Block</mat-label>
+                                    <input matInput
+                                           name="block"
+                                           formControlName="block"
+                                           required>
+                                </mat-form-field> -->
+                                <mat-form-field appearance="outline" floatLabel="always" class="w-100-p" [ngStyle]="{'font-size.px': 12}">
+                                       
+                                        <input matInput
+                                               name="occupation" placeholder="Occupation"
+                                               formControlName="occupation"
+                                               required>
+                                    </mat-form-field>
+                                    <mat-form-field appearance="outline" floatLabel="always" class="w-100-p" [ngStyle]="{'font-size.px': 12}">
+                                            <mat-label>Resident Class</mat-label>
+                                            <mat-select  
+                                           name="class" formControlName="class" required>
+                                                    <mat-option  value="ordinary">
+                                                            Ordinary
+                                                        </mat-option> 
+                                                        <mat-option  value="Associate">
+                                                            Associate
+                                                        </mat-option>
+                                                        <mat-option  value="Bonafied">
+                                                            Bonafied
+                                                        </mat-option>
+                                                        <mat-option  value="Nominal">
+                                                        Nominal
+                                                        </mat-option>   
+                                                        </mat-select>
+                                        </mat-form-field>
+                                        <mat-form-field appearance="outline" floatLabel="always" class="w-100-p" [ngStyle]="{'font-size.px': 12}">
+                                            <mat-label>Email</mat-label>
+                                            <input matInput
+                                                   name="email"
+                                                   formControlName="email"
+                                                   required>
+                                        </mat-form-field>
+                                        <mat-form-field appearance="outline" floatLabel="always" class="w-100-p" [ngStyle]="{'font-size.px': 12}">
+                                            <mat-label>Confirm Email</mat-label>
+                                            <input matInput
+                                                   name="email"
+                                                   formControlName="email"
+                                                   required>
+                                        </mat-form-field>
+                                        <mat-form-field appearance="outline" floatLabel="always" class="w-100-p" [ngStyle]="{'font-size.px': 12}">
+                                            <mat-label>Mobile No.</mat-label>
+                                            <input matInput 
+                                                   name="priceTaxExcl"
+                                                   formControlName="priceTaxExcl"
+                                                   >
+                                            
+                                        </mat-form-field>
+                                        <mat-form-field appearance="outline" floatLabel="always" class="w-100-p" [ngStyle]="{'font-size.px': 12}">
+                                            <mat-label>Blood Group</mat-label>
+                                            <mat-select  
+                                           formControlName="blood_group" required>
+                                                    <mat-option  value="0 +ve">
+                                                            0 +ve
+                                                        </mat-option> 
+                                                        <mat-option  value="0 -ve">
+                                                            0 -ve
+                                                        </mat-option>
+                                                        <mat-option  value="AB +ve">
+                                                            AB +ve
+                                                        </mat-option>
+                                                        <mat-option  value="AB -ve">
+                                                        AB -ve
+                                                        </mat-option> 
+                                                        <mat-option  value="A +ve">
+                                                            A +ve
+                                                        </mat-option>
+                                                        <mat-option  value="A -ve">
+                                                        A -ve
+                                                        </mat-option>
+                                                        <mat-option  value="B +ve">
+                                                            B +ve
+                                                        </mat-option>
+                                                        <mat-option  value="B -ve">
+                                                        B -ve
+                                                        </mat-option>    
+                                                        </mat-select>
+                                        </mat-form-field>
+                                        <mat-form-field appearance="outline" floatLabel="always" class="w-100-p" [ngStyle]="{'font-size.px': 12}">
+                                            <mat-label>Owner/Resident</mat-label>
+                                            <mat-select  
+                                           name="class" formControlName="owner" required>
+                                                    <mat-option  value="owner">
+                                                            Owner
+                                                        </mat-option> 
+                                                        <mat-option  value="resident">
+                                                            Resident
+                                                        </mat-option>
+                                                         
+                                                        </mat-select>
+                                        </mat-form-field>
+                                     
+                              
 
                             </div>
 
@@ -150,35 +213,28 @@
                                 </div>
                             </div>
 
-                        </mat-tab>-->
+                        </mat-tab> -->
 
                         <mat-tab label="Address">
 
                             <div class="tab-content p-24" fusePerfectScrollbar>
 
-                                <mat-form-field appearance="outline" floatLabel="always" class="w-100-p">
-                                    <mat-label>Name/House No.</mat-label>
-                                    <input matInput 
-                                           name="priceTaxExcl"
-                                           formControlName="priceTaxExcl"
-                                           >
-                                    
-                                </mat-form-field>
+                               
 
-                                <mat-form-field appearance="outline" floatLabel="always" class="w-100-p">
-                                    <mat-label>Street 1</mat-label>
+                                <mat-form-field appearance="outline" floatLabel="always" class="w-100-p" [ngStyle]="{'font-size.px': 12}">
+                                    <mat-label>Flat</mat-label>
                                     <input matInput 
-                                           name="priceTaxIncl"
-                                           formControlName="priceTaxIncl"
+                                           name="flat"
+                                           formControlName="flat"
                                            >
                                    
                                 </mat-form-field>
 
-                                <mat-form-field appearance="outline" floatLabel="always" class="w-100-p">
-                                    <mat-label>Street 2</mat-label>
+                                <mat-form-field appearance="outline" floatLabel="always" class="w-100-p" [ngStyle]="{'font-size.px': 12}">
+                                    <mat-label>Street</mat-label>
                                     <input matInput 
-                                           name="taxRate"
-                                           formControlName="taxRate"
+                                           name="street"
+                                           formControlName="street"
                                            >
                                    
                                 </mat-form-field>
@@ -186,49 +242,161 @@
                                 <mat-form-field appearance="outline" floatLabel="always" class="w-100-p">
                                     <mat-label>Landmark</mat-label>
                                     <input matInput 
-                                           name="comparedPrice"
-                                           formControlName="comparedPrice"
+                                           name="landmark"
+                                           formControlName="landmark"
                                            >
                                   
                                 </mat-form-field>
                                 <mat-form-field appearance="outline" floatLabel="always" class="w-100-p">
-                                    <mat-label>Area</mat-label>
+                                    <mat-label>Country</mat-label>
                                     <input matInput 
                                            name="taxRate"
                                            formControlName="taxRate"
                                           >
                                    
-                                </mat-form-field>
-                                <mat-form-field appearance="outline"  floatLabel="always" class="w-100-p">
-                                    <mat-label>Select City</mat-label>
-                                   
-                                    <select matNativeControl  formControlName="description">
-                                        <option value="Maharashtra">Maharashtra</option>
-                                        <option value="Karnataka">Karnataka</option>
-                                        <option value="Telangana">Telangana</option>
-                                        <option value="Madhya Pradesh">Madhya Pradesh</option>
-                                      </select>
-                                </mat-form-field>
-                                <mat-form-field appearance="outline"  floatLabel="always" class="w-100-p">
-                                    <mat-label>Select State</mat-label>
-                                   
-                                    <select matNativeControl formControlName="description">
-                                        <option value="Maharashtra">Maharashtra</option>
-                                        <option value="Karnataka">Karnataka</option>
-                                        <option value="Telangana">Telangana</option>
-                                        <option value="Madhya Pradesh">Madhya Pradesh</option>
-                                      </select>
-                                </mat-form-field>
-                              
-
+                                
+                            </mat-form-field>
+                            <mat-form-field appearance="outline" floatLabel="always" class="w-100-p">
+                                <mat-label>State</mat-label>
+                                <input matInput 
+                                       name="taxRate"
+                                       formControlName="taxRate"
+                                      >
+                               
+                           
+                        </mat-form-field>
+                        <mat-form-field appearance="outline" floatLabel="always" class="w-100-p">
+                            <mat-label>City</mat-label>
+                            <input matInput 
+                                   name="taxRate"
+                                   formControlName="taxRate"
+                                  >
+                        </mat-form-field>
                                 <mat-form-field appearance="outline" floatLabel="always" class="w-100-p">
-                                    <mat-label>Pincode</mat-label>
+                                    <mat-label>Zipcode</mat-label>
                                     <input matInput 
                                            name="taxRate"
                                            formControlName="taxRate"
                                           >
                                    
+                                </mat-form-field> 
+
+                            </div>
+                        </mat-tab>
+
+                        <mat-tab label="Flat Details">
+
+                            <div class="tab-content p-24" fusePerfectScrollbar>
+
+                                <mat-form-field appearance="outline" floatLabel="always" class="w-100-p" [ngStyle]="{'font-size.px': 12}">
+                                    <mat-label>Flat type</mat-label>
+                                    <mat-select  
+                                   formControlName="flat" required>
+                                            <mat-option  value="1 RK">
+                                                    1 RK
+                                                </mat-option> 
+                                                <mat-option  value="1 BHK">
+                                                    1 BHK
+                                                </mat-option>
+                                                <mat-option  value="2 BHK">
+                                                    2 BHK
+                                                </mat-option>
+                                                <mat-option  value="3 BHK">
+                                                3 BHK
+                                                </mat-option> 
+                                                
+                                                </mat-select>
                                 </mat-form-field>
+                                <mat-form-field appearance="outline" floatLabel="always" class="w-100-p" [ngStyle]="{'font-size.px': 12}">
+                                    <mat-label>Flat Payment </mat-label>
+                                    <mat-select  
+                                   formControlName="flat" required>
+                                            <mat-option  value="per SQFT">
+                                                Per SQFT
+                                                </mat-option> 
+                                                <mat-option  value="fix">
+                                                    Fix
+                                                </mat-option>
+                                                <mat-option  value="percentage">
+                                                    Percentage
+                                                </mat-option>
+                                                
+                                                </mat-select>
+                                </mat-form-field>
+                                <mat-form-field appearance="outline" floatLabel="always" class="w-100-p">
+                                    <mat-label>Amount</mat-label>
+                                    <input matInput 
+                                           name="taxRate"
+                                           formControlName="taxRate"
+                                          >
+                                   
+                                </mat-form-field> 
+
+                            </div>
+                        </mat-tab>
+
+                        <mat-tab label="Vehicle Details">
+
+                            <div class="tab-content p-24" fusePerfectScrollbar>
+
+                                <mat-form-field appearance="outline" floatLabel="always" class="w-100-p" [ngStyle]="{'font-size.px': 12}">
+                                    <mat-label>Image</mat-label>
+                                    <input matInput
+                                           name="image"
+                                           formControlName="image"
+                                           required>
+                                </mat-form-field>
+                                <mat-form-field appearance="outline" floatLabel="always" class="w-100-p" [ngStyle]="{'font-size.px': 12}">
+                                   <mat-label>Name</mat-label>
+                                    <input matInput
+                                           name="name"
+                                           formControlName="name"
+                                           required>
+                                </mat-form-field>
+                                <mat-form-field appearance="outline" floatLabel="always" class="w-100-p" [ngStyle]="{'font-size.px': 12}">
+                                    <mat-label>Model No.</mat-label>
+                                     <input matInput
+                                            name="model"
+                                            formControlName="model"
+                                            required>
+                                 </mat-form-field>
+                                <mat-form-field appearance="outline" floatLabel="always" class="w-100-p" [ngStyle]="{'font-size.px': 12}">
+                                    <mat-label>Vehicle type</mat-label>
+                                    <mat-select  
+                                   formControlName="vehicle" required>
+                                            <mat-option  value="2 wheeler">
+                                                    2 Wheeler
+                                                </mat-option> 
+                                                <mat-option  value="4 wheeler">
+                                                     Wheeler
+                                                </mat-option> 
+                                                
+                                                </mat-select>
+                                </mat-form-field>
+                                <mat-form-field appearance="outline" floatLabel="always" class="w-100-p" [ngStyle]="{'font-size.px': 12}">
+                                    <mat-label>Flat Payment </mat-label>
+                                    <mat-select  
+                                   formControlName="flat" required>
+                                            <mat-option  value="per SQFT">
+                                                Per SQFT
+                                                </mat-option> 
+                                                <mat-option  value="fix">
+                                                    Fix
+                                                </mat-option>
+                                                <mat-option  value="percentage">
+                                                    Percentage
+                                                </mat-option>
+                                                
+                                                </mat-select>
+                                </mat-form-field>
+                                <mat-form-field appearance="outline" floatLabel="always" class="w-100-p">
+                                    <mat-label>Amount</mat-label>
+                                    <input matInput 
+                                           name="taxRate"
+                                           formControlName="taxRate"
+                                          >
+                                   
+                                </mat-form-field> 
 
                             </div>
                         </mat-tab>

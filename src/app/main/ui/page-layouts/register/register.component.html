@@ -15,12 +15,32 @@
                 <mat-step [stepControl]="firstFormGroup">
                   <form [formGroup]="firstFormGroup">
                     <mat-form-field appearance="outline" [ngStyle]="{'font-size.px': 12}">
+                        <mat-label>Name</mat-label>
                         <input matInput placeholder="Name" formControlName="firstCtrl" required>
                         <mat-icon matSuffix class="secondary-text">account_circle</mat-icon>
                         <mat-error>
                             Name is required
                         </mat-error>
                       </mat-form-field>
+                      <mat-form-field appearance="outline" [ngStyle]="{'font-size.px': 12}">
+                        <mat-label>Email</mat-label>
+                        <input matInput formControlName="firstCtrl">
+                        <mat-icon matSuffix class="secondary-text">mail</mat-icon>
+                        <mat-error *ngIf="registerForm.get('email').hasError('required')">
+                            Email is required
+                        </mat-error>
+                        <mat-error *ngIf="registerForm.get('email').hasError('email')">
+                            Please enter a valid email address
+                        </mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" [ngStyle]="{'font-size.px': 12}">
+                        <mat-label>Mobile No.</mat-label>
+                        <input matInput type="password" formControlName="firstCtrl">
+                        <mat-icon matSuffix class="secondary-text">mobile_friendly</mat-icon>
+                        <mat-error>
+                            Mobile no. is required
+                        </mat-error>
+                    </mat-form-field>
                       <mat-form-field appearance="outline" [ngStyle]="{'font-size.px': 12}">
                         <mat-label>Password</mat-label>
                         <input matInput type="password" formControlName="firstCtrl" required>
@@ -30,17 +50,728 @@
                         </mat-error>
                     </mat-form-field>
                       <mat-form-field appearance="outline" [ngStyle]="{'font-size.px': 12}">
-                        <mat-label>Password (Confirm)</mat-label>
-                        <input matInput type="password" formControlName="firstCtrl" required>
-                        <mat-icon matSuffix class="secondary-text">vpn_key</mat-icon>
-                        <mat-error *ngIf="registerForm.get('passwordConfirm').hasError('required')">
-                            Password confirmation is required
-                        </mat-error>
-                        <mat-error *ngIf="!registerForm.get('passwordConfirm').hasError('required') &&
-                                           registerForm.get('passwordConfirm').hasError('passwordsNotMatching')">
-                            Passwords must match
-                        </mat-error>
-                    </mat-form-field>
+                         
+                        <mat-label>What does your organization do? </mat-label>
+                        <mat-select  placeholder="Organization" formControlName="firstCtrl" required>
+                                <mat-option value="Manufacturing">Manufacturing</mat-option>
+                                <mat-option value="Retail">Retail</mat-option>
+                                <mat-option value="Services">Services</mat-option>
+                                <mat-option value="Education">Education</mat-option>
+                                </mat-select>
+                      </mat-form-field>
+                     <!-- <mat-grid-list cols="2" rowHeight="2:1">
+                        <mat-grid-tile>
+                            <mat-form-field appearance="outline" [ngStyle]="{'font-size.px': 12}">
+                                <mat-label>Language</mat-label>
+                               
+                                <mat-select  placeholder="Language" formControlName="firstCtrl" required>
+                                        <mat-option value="AF">Afrikanns</mat-option>
+                                        <mat-option value="SQ">Albanian</mat-option>
+                                        <mat-option value="AR">Arabic</mat-option>
+                                        <mat-option value="HY">Armenian</mat-option>
+                                        <mat-option value="EU">Basque</mat-option>
+                                        <mat-option value="BN">Bengali</mat-option>
+                                        <mat-option value="BG">Bulgarian</mat-option>
+                                        <mat-option value="CA">Catalan</mat-option>
+                                        <mat-option value="KM">Cambodian</mat-option>
+                                        <mat-option value="ZH">Chinese (Mandarin)</mat-option>
+                                        <mat-option value="HR">Croation</mat-option>
+                                        <mat-option value="CS">Czech</mat-option>
+                                        <mat-option value="DA">Danish</mat-option>
+                                        <mat-option value="NL">Dutch</mat-option>
+                                        <mat-option value="EN">English</mat-option>
+                                        <mat-option value="ET">Estonian</mat-option>
+                                        <mat-option value="FJ">Fiji</mat-option>
+                                        <mat-option value="FI">Finnish</mat-option>
+                                        <mat-option value="FR">French</mat-option>
+                                        <mat-option value="KA">Georgian</mat-option>
+                                        <mat-option value="DE">German</mat-option>
+                                        <mat-option value="EL">Greek</mat-option>
+                                        <mat-option value="GU">Gujarati</mat-option>
+                                        <mat-option value="HE">Hebrew</mat-option>
+                                        <mat-option value="HI">Hindi</mat-option>
+                                        <mat-option value="HU">Hungarian</mat-option>
+                                        <mat-option value="IS">Icelandic</mat-option>
+                                        <mat-option value="ID">Indonesian</mat-option>
+                                        <mat-option value="GA">Irish</mat-option>
+                                        <mat-option value="IT">Italian</mat-option>
+                                        <mat-option value="JA">Japanese</mat-option>
+                                        <mat-option value="JW">Javanese</mat-option>
+                                        <mat-option value="KO">Korean</mat-option>
+                                        <mat-option value="LA">Latin</mat-option>
+                                        <mat-option value="LV">Latvian</mat-option>
+                                        <mat-option value="LT">Lithuanian</mat-option>
+                                        <mat-option value="MK">Macedonian</mat-option>
+                                        <mat-option value="MS">Malay</mat-option>
+                                        <mat-option value="ML">Malayalam</mat-option>
+                                        <mat-option value="MT">Maltese</mat-option>
+                                        <mat-option value="MI">Maori</mat-option>
+                                        <mat-option value="MR">Marathi</mat-option>
+                                        <mat-option value="MN">Mongolian</mat-option>
+                                        <mat-option value="NE">Nepali</mat-option>
+                                        <mat-option value="NO">Norwegian</mat-option>
+                                        <mat-option value="FA">Persian</mat-option>
+                                        <mat-option value="PL">Polish</mat-option>
+                                        <mat-option value="PT">Portuguese</mat-option>
+                                        <mat-option value="PA">Punjabi</mat-option>
+                                        <mat-option value="QU">Quechua</mat-option>
+                                        <mat-option value="RO">Romanian</mat-option>
+                                        <mat-option value="RU">Russian</mat-option>
+                                        <mat-option value="SM">Samoan</mat-option>
+                                        <mat-option value="SR">Serbian</mat-option>
+                                        <mat-option value="SK">Slovak</mat-option>
+                                        <mat-option value="SL">Slovenian</mat-option>
+                                        <mat-option value="ES">Spanish</mat-option>
+                                        <mat-option value="SW">Swahili</mat-option>
+                                        <mat-option value="SV">Swedish </mat-option>
+                                        <mat-option value="TA">Tamil</mat-option>
+                                        <mat-option value="TT">Tatar</mat-option>
+                                        <mat-option value="TE">Telugu</mat-option>
+                                        <mat-option value="TH">Thai</mat-option>
+                                        <mat-option value="BO">Tibetan</mat-option>
+                                        <mat-option value="TO">Tonga</mat-option>
+                                        <mat-option value="TR">Turkish</mat-option>
+                                        <mat-option value="UK">Ukranian</mat-option>
+                                        <mat-option value="UR">Urdu</mat-option>
+                                        <mat-option value="UZ">Uzbek</mat-option>
+                                        <mat-option value="VI">Vietnamese</mat-option>
+                                        <mat-option value="CY">Welsh</mat-option>
+                                        <mat-option value="XH">Xhosa</mat-option>
+                                      </mat-select>
+                                <mat-error>
+                                    Language is required
+                                </mat-error>
+                              </mat-form-field>
+                        </mat-grid-tile>
+                        <mat-grid-tile>
+                            <mat-form-field appearance="outline" [ngStyle]="{'font-size.px': 12}">
+                                    <mat-select  placeholder="Country" formControlName="firstCtrl" required>
+                                            <mat-option value="AFG">Afghanistan</mat-option>
+                                            <mat-option value="ALA">Åland Islands</mat-option>
+                                            <mat-option value="ALB">Albania</mat-option>
+                                            <mat-option value="DZA">Algeria</mat-option>
+                                            <mat-option value="ASM">American Samoa</mat-option>
+                                            <mat-option value="AND">Andorra</mat-option>
+                                            <mat-option value="AGO">Angola</mat-option>
+                                            <mat-option value="AIA">Anguilla</mat-option>
+                                            <mat-option value="ATA">Antarctica</mat-option>
+                                            <mat-option value="ATG">Antigua and Barbuda</mat-option>
+                                            <mat-option value="ARG">Argentina</mat-option>
+                                            <mat-option value="ARM">Armenia</mat-option>
+                                            <mat-option value="ABW">Aruba</mat-option>
+                                            <mat-option value="AUS">Australia</mat-option>
+                                            <mat-option value="AUT">Austria</mat-option>
+                                            <mat-option value="AZE">Azerbaijan</mat-option>
+                                            <mat-option value="BHS">Bahamas</mat-option>
+                                            <mat-option value="BHR">Bahrain</mat-option>
+                                            <mat-option value="BGD">Bangladesh</mat-option>
+                                            <mat-option value="BRB">Barbados</mat-option>
+                                            <mat-option value="BLR">Belarus</mat-option>
+                                            <mat-option value="BEL">Belgium</mat-option>
+                                            <mat-option value="BLZ">Belize</mat-option>
+                                            <mat-option value="BEN">Benin</mat-option>
+                                            <mat-option value="BMU">Bermuda</mat-option>
+                                            <mat-option value="BTN">Bhutan</mat-option>
+                                            <mat-option value="BOL">Bolivia, Plurinational State of</mat-option>
+                                            <mat-option value="BES">Bonaire, Sint Eustatius and Saba</mat-option>
+                                            <mat-option value="BIH">Bosnia and Herzegovina</mat-option>
+                                            <mat-option value="BWA">Botswana</mat-option>
+                                            <mat-option value="BVT">Bouvet Island</mat-option>
+                                            <mat-option value="BRA">Brazil</mat-option>
+                                            <mat-option value="IOT">British Indian Ocean Territory</mat-option>
+                                            <mat-option value="BRN">Brunei Darussalam</mat-option>
+                                            <mat-option value="BGR">Bulgaria</mat-option>
+                                            <mat-option value="BFA">Burkina Faso</mat-option>
+                                            <mat-option value="BDI">Burundi</mat-option>
+                                            <mat-option value="KHM">Cambodia</mat-option>
+                                            <mat-option value="CMR">Cameroon</mat-option>
+                                            <mat-option value="CAN">Canada</mat-option>
+                                            <mat-option value="CPV">Cape Verde</mat-option>
+                                            <mat-option value="CYM">Cayman Islands</mat-option>
+                                            <mat-option value="CAF">Central African Republic</mat-option>
+                                            <mat-option value="TCD">Chad</mat-option>
+                                            <mat-option value="CHL">Chile</mat-option>
+                                            <mat-option value="CHN">China</mat-option>
+                                            <mat-option value="CXR">Christmas Island</mat-option>
+                                            <mat-option value="CCK">Cocos (Keeling) Islands</mat-option>
+                                            <mat-option value="COL">Colombia</mat-option>
+                                            <mat-option value="COM">Comoros</mat-option>
+                                            <mat-option value="COG">Congo</mat-option>
+                                            <mat-option value="COD">Congo, the Democratic Republic of the</mat-option>
+                                            <mat-option value="COK">Cook Islands</mat-option>
+                                            <mat-option value="CRI">Costa Rica</mat-option>
+                                            <mat-option value="CIV">Côte d'Ivoire</mat-option>
+                                            <mat-option value="HRV">Croatia</mat-option>
+                                            <mat-option value="CUB">Cuba</mat-option>
+                                            <mat-option value="CUW">Curaçao</mat-option>
+                                            <mat-option value="CYP">Cyprus</mat-option>
+                                            <mat-option value="CZE">Czech Republic</mat-option>
+                                            <mat-option value="DNK">Denmark</mat-option>
+                                            <mat-option value="DJI">Djibouti</mat-option>
+                                            <mat-option value="DMA">Dominica</mat-option>
+                                            <mat-option value="DOM">Dominican Republic</mat-option>
+                                            <mat-option value="ECU">Ecuador</mat-option>
+                                            <mat-option value="EGY">Egypt</mat-option>
+                                            <mat-option value="SLV">El Salvador</mat-option>
+                                            <mat-option value="GNQ">Equatorial Guinea</mat-option>
+                                            <mat-option value="ERI">Eritrea</mat-option>
+                                            <mat-option value="EST">Estonia</mat-option>
+                                            <mat-option value="ETH">Ethiopia</mat-option>
+                                            <mat-option value="FLK">Falkland Islands (Malvinas)</mat-option>
+                                            <mat-option value="FRO">Faroe Islands</mat-option>
+                                            <mat-option value="FJI">Fiji</mat-option>
+                                            <mat-option value="FIN">Finland</mat-option>
+                                            <mat-option value="FRA">France</mat-option>
+                                            <mat-option value="GUF">French Guiana</mat-option>
+                                            <mat-option value="PYF">French Polynesia</mat-option>
+                                            <mat-option value="ATF">French Southern Territories</mat-option>
+                                            <mat-option value="GAB">Gabon</mat-option>
+                                            <mat-option value="GMB">Gambia</mat-option>
+                                            <mat-option value="GEO">Georgia</mat-option>
+                                            <mat-option value="DEU">Germany</mat-option>
+                                            <mat-option value="GHA">Ghana</mat-option>
+                                            <mat-option value="GIB">Gibraltar</mat-option>
+                                            <mat-option value="GRC">Greece</mat-option>
+                                            <mat-option value="GRL">Greenland</mat-option>
+                                            <mat-option value="GRD">Grenada</mat-option>
+                                            <mat-option value="GLP">Guadeloupe</mat-option>
+                                            <mat-option value="GUM">Guam</mat-option>
+                                            <mat-option value="GTM">Guatemala</mat-option>
+                                            <mat-option value="GGY">Guernsey</mat-option>
+                                            <mat-option value="GIN">Guinea</mat-option>
+                                            <mat-option value="GNB">Guinea-Bissau</mat-option>
+                                            <mat-option value="GUY">Guyana</mat-option>
+                                            <mat-option value="HTI">Haiti</mat-option>
+                                            <mat-option value="HMD">Heard Island and McDonald Islands</mat-option>
+                                            <mat-option value="VAT">Holy See (Vatican City State)</mat-option>
+                                            <mat-option value="HND">Honduras</mat-option>
+                                            <mat-option value="HKG">Hong Kong</mat-option>
+                                            <mat-option value="HUN">Hungary</mat-option>
+                                            <mat-option value="ISL">Iceland</mat-option>
+                                            <mat-option value="IND">India</mat-option>
+                                            <mat-option value="IDN">Indonesia</mat-option>
+                                            <mat-option value="IRN">Iran, Islamic Republic of</mat-option>
+                                            <mat-option value="IRQ">Iraq</mat-option>
+                                            <mat-option value="IRL">Ireland</mat-option>
+                                            <mat-option value="IMN">Isle of Man</mat-option>
+                                            <mat-option value="ISR">Israel</mat-option>
+                                            <mat-option value="ITA">Italy</mat-option>
+                                            <mat-option value="JAM">Jamaica</mat-option>
+                                            <mat-option value="JPN">Japan</mat-option>
+                                            <mat-option value="JEY">Jersey</mat-option>
+                                            <mat-option value="JOR">Jordan</mat-option>
+                                            <mat-option value="KAZ">Kazakhstan</mat-option>
+                                            <mat-option value="KEN">Kenya</mat-option>
+                                            <mat-option value="KIR">Kiribati</mat-option>
+                                            <mat-option value="PRK">Korea, Democratic People's Republic of</mat-option>
+                                            <mat-option value="KOR">Korea, Republic of</mat-option>
+                                            <mat-option value="KWT">Kuwait</mat-option>
+                                            <mat-option value="KGZ">Kyrgyzstan</mat-option>
+                                            <mat-option value="LAO">Lao People's Democratic Republic</mat-option>
+                                            <mat-option value="LVA">Latvia</mat-option>
+                                            <mat-option value="LBN">Lebanon</mat-option>
+                                            <mat-option value="LSO">Lesotho</mat-option>
+                                            <mat-option value="LBR">Liberia</mat-option>
+                                            <mat-option value="LBY">Libya</mat-option>
+                                            <mat-option value="LIE">Liechtenstein</mat-option>
+                                            <mat-option value="LTU">Lithuania</mat-option>
+                                            <mat-option value="LUX">Luxembourg</mat-option>
+                                            <mat-option value="MAC">Macao</mat-option>
+                                            <mat-option value="MKD">Macedonia, the former Yugoslav Republic of</mat-option>
+                                            <mat-option value="MDG">Madagascar</mat-option>
+                                            <mat-option value="MWI">Malawi</mat-option>
+                                            <mat-option value="MYS">Malaysia</mat-option>
+                                            <mat-option value="MDV">Maldives</mat-option>
+                                            <mat-option value="MLI">Mali</mat-option>
+                                            <mat-option value="MLT">Malta</mat-option>
+                                            <mat-option value="MHL">Marshall Islands</mat-option>
+                                            <mat-option value="MTQ">Martinique</mat-option>
+                                            <mat-option value="MRT">Mauritania</mat-option>
+                                            <mat-option value="MUS">Mauritius</mat-option>
+                                            <mat-option value="MYT">Mayotte</mat-option>
+                                            <mat-option value="MEX">Mexico</mat-option>
+                                            <mat-option value="FSM">Micronesia, Federated States of</mat-option>
+                                            <mat-option value="MDA">Moldova, Republic of</mat-option>
+                                            <mat-option value="MCO">Monaco</mat-option>
+                                            <mat-option value="MNG">Mongolia</mat-option>
+                                            <mat-option value="MNE">Montenegro</mat-option>
+                                            <mat-option value="MSR">Montserrat</mat-option>
+                                            <mat-option value="MAR">Morocco</mat-option>
+                                            <mat-option value="MOZ">Mozambique</mat-option>
+                                            <mat-option value="MMR">Myanmar</mat-option>
+                                            <mat-option value="NAM">Namibia</mat-option>
+                                            <mat-option value="NRU">Nauru</mat-option>
+                                            <mat-option value="NPL">Nepal</mat-option>
+                                            <mat-option value="NLD">Netherlands</mat-option>
+                                            <mat-option value="NCL">New Caledonia</mat-option>
+                                            <mat-option value="NZL">New Zealand</mat-option>
+                                            <mat-option value="NIC">Nicaragua</mat-option>
+                                            <mat-option value="NER">Niger</mat-option>
+                                            <mat-option value="NGA">Nigeria</mat-option>
+                                            <mat-option value="NIU">Niue</mat-option>
+                                            <mat-option value="NFK">Norfolk Island</mat-option>
+                                            <mat-option value="MNP">Northern Mariana Islands</mat-option>
+                                            <mat-option value="NOR">Norway</mat-option>
+                                            <mat-option value="OMN">Oman</mat-option>
+                                            <mat-option value="PAK">Pakistan</mat-option>
+                                            <mat-option value="PLW">Palau</mat-option>
+                                            <mat-option value="PSE">Palestinian Territory, Occupied</mat-option>
+                                            <mat-option value="PAN">Panama</mat-option>
+                                            <mat-option value="PNG">Papua New Guinea</mat-option>
+                                            <mat-option value="PRY">Paraguay</mat-option>
+                                            <mat-option value="PER">Peru</mat-option>
+                                            <mat-option value="PHL">Philippines</mat-option>
+                                            <mat-option value="PCN">Pitcairn</mat-option>
+                                            <mat-option value="POL">Poland</mat-option>
+                                            <mat-option value="PRT">Portugal</mat-option>
+                                            <mat-option value="PRI">Puerto Rico</mat-option>
+                                            <mat-option value="QAT">Qatar</mat-option>
+                                            <mat-option value="REU">Réunion</mat-option>
+                                            <mat-option value="ROU">Romania</mat-option>
+                                            <mat-option value="RUS">Russian Federation</mat-option>
+                                            <mat-option value="RWA">Rwanda</mat-option>
+                                            <mat-option value="BLM">Saint Barthélemy</mat-option>
+                                            <mat-option value="SHN">Saint Helena, Ascension and Tristan da Cunha</mat-option>
+                                            <mat-option value="KNA">Saint Kitts and Nevis</mat-option>
+                                            <mat-option value="LCA">Saint Lucia</mat-option>
+                                            <mat-option value="MAF">Saint Martin (French part)</mat-option>
+                                            <mat-option value="SPM">Saint Pierre and Miquelon</mat-option>
+                                            <mat-option value="VCT">Saint Vincent and the Grenadines</mat-option>
+                                            <mat-option value="WSM">Samoa</mat-option>
+                                            <mat-option value="SMR">San Marino</mat-option>
+                                            <mat-option value="STP">Sao Tome and Principe</mat-option>
+                                            <mat-option value="SAU">Saudi Arabia</mat-option>
+                                            <mat-option value="SEN">Senegal</mat-option>
+                                            <mat-option value="SRB">Serbia</mat-option>
+                                            <mat-option value="SYC">Seychelles</mat-option>
+                                            <mat-option value="SLE">Sierra Leone</mat-option>
+                                            <mat-option value="SGP">Singapore</mat-option>
+                                            <mat-option value="SXM">Sint Maarten (Dutch part)</mat-option>
+                                            <mat-option value="SVK">Slovakia</mat-option>
+                                            <mat-option value="SVN">Slovenia</mat-option>
+                                            <mat-option value="SLB">Solomon Islands</mat-option>
+                                            <mat-option value="SOM">Somalia</mat-option>
+                                            <mat-option value="ZAF">South Africa</mat-option>
+                                            <mat-option value="SGS">South Georgia and the South Sandwich Islands</mat-option>
+                                            <mat-option value="SSD">South Sudan</mat-option>
+                                            <mat-option value="ESP">Spain</mat-option>
+                                            <mat-option value="LKA">Sri Lanka</mat-option>
+                                            <mat-option value="SDN">Sudan</mat-option>
+                                            <mat-option value="SUR">Suriname</mat-option>
+                                            <mat-option value="SJM">Svalbard and Jan Mayen</mat-option>
+                                            <mat-option value="SWZ">Swaziland</mat-option>
+                                            <mat-option value="SWE">Sweden</mat-option>
+                                            <mat-option value="CHE">Switzerland</mat-option>
+                                            <mat-option value="SYR">Syrian Arab Republic</mat-option>
+                                            <mat-option value="TWN">Taiwan, Province of China</mat-option>
+                                            <mat-option value="TJK">Tajikistan</mat-option>
+                                            <mat-option value="TZA">Tanzania, United Republic of</mat-option>
+                                            <mat-option value="THA">Thailand</mat-option>
+                                            <mat-option value="TLS">Timor-Leste</mat-option>
+                                            <mat-option value="TGO">Togo</mat-option>
+                                            <mat-option value="TKL">Tokelau</mat-option>
+                                            <mat-option value="TON">Tonga</mat-option>
+                                            <mat-option value="TTO">Trinidad and Tobago</mat-option>
+                                            <mat-option value="TUN">Tunisia</mat-option>
+                                            <mat-option value="TUR">Turkey</mat-option>
+                                            <mat-option value="TKM">Turkmenistan</mat-option>
+                                            <mat-option value="TCA">Turks and Caicos Islands</mat-option>
+                                            <mat-option value="TUV">Tuvalu</mat-option>
+                                            <mat-option value="UGA">Uganda</mat-option>
+                                            <mat-option value="UKR">Ukraine</mat-option>
+                                            <mat-option value="ARE">United Arab Emirates</mat-option>
+                                            <mat-option value="GBR">United Kingdom</mat-option>
+                                            <mat-option value="USA">United States</mat-option>
+                                            <mat-option value="UMI">United States Minor Outlying Islands</mat-option>
+                                            <mat-option value="URY">Uruguay</mat-option>
+                                            <mat-option value="UZB">Uzbekistan</mat-option>
+                                            <mat-option value="VUT">Vanuatu</mat-option>
+                                            <mat-option value="VEN">Venezuela, Bolivarian Republic of</mat-option>
+                                            <mat-option value="VNM">Viet Nam</mat-option>
+                                            <mat-option value="VGB">Virgin Islands, British</mat-option>
+                                            <mat-option value="VIR">Virgin Islands, U.S.</mat-option>
+                                            <mat-option value="WLF">Wallis and Futuna</mat-option>
+                                            <mat-option value="ESH">Western Sahara</mat-option>
+                                            <mat-option value="YEM">Yemen</mat-option>
+                                            <mat-option value="ZMB">Zambia</mat-option>
+                                            <mat-option value="ZWE">Zimbabwe</mat-option>
+                                        </mat-select>
+                                <mat-error>
+                                    Country is required
+                                </mat-error>
+                              </mat-form-field>
+
+                        </mat-grid-tile> 
+                        <mat-grid-tile>
+                            <mat-form-field appearance="outline" [ngStyle]="{'font-size.px': 12}">
+                                    <mat-select placeholder="TimeZone" formControlName="firstCtrl" required>
+                                            <mat-option timeZoneId="1" gmtAdjustment="GMT-12:00" useDaylightTime="0" value="-12">(GMT-12:00) International Date Line West</mat-option>
+                                            <mat-option timeZoneId="2" gmtAdjustment="GMT-11:00" useDaylightTime="0" value="-11">(GMT-11:00) Midway Island, Samoa</mat-option>
+                                            <mat-option timeZoneId="3" gmtAdjustment="GMT-10:00" useDaylightTime="0" value="-10">(GMT-10:00) Hawaii</mat-option>
+                                            <mat-option timeZoneId="4" gmtAdjustment="GMT-09:00" useDaylightTime="1" value="-9">(GMT-09:00) Alaska</mat-option>
+                                            <mat-option timeZoneId="5" gmtAdjustment="GMT-08:00" useDaylightTime="1" value="-8">(GMT-08:00) Pacific Time (US & Canada)</mat-option>
+                                            <mat-option timeZoneId="6" gmtAdjustment="GMT-08:00" useDaylightTime="1" value="-8">(GMT-08:00) Tijuana, Baja California</mat-option>
+                                            <mat-option timeZoneId="7" gmtAdjustment="GMT-07:00" useDaylightTime="0" value="-7">(GMT-07:00) Arizona</mat-option>
+                                            <mat-option timeZoneId="8" gmtAdjustment="GMT-07:00" useDaylightTime="1" value="-7">(GMT-07:00) Chihuahua, La Paz, Mazatlan</mat-option>
+                                            <mat-option timeZoneId="9" gmtAdjustment="GMT-07:00" useDaylightTime="1" value="-7">(GMT-07:00) Mountain Time (US & Canada)</mat-option>
+                                            <mat-option timeZoneId="10" gmtAdjustment="GMT-06:00" useDaylightTime="0" value="-6">(GMT-06:00) Central America</mat-option>
+                                            <mat-option timeZoneId="11" gmtAdjustment="GMT-06:00" useDaylightTime="1" value="-6">(GMT-06:00) Central Time (US & Canada)</mat-option>
+                                            <mat-option timeZoneId="12" gmtAdjustment="GMT-06:00" useDaylightTime="1" value="-6">(GMT-06:00) Guadalajara, Mexico City, Monterrey</mat-option>
+                                            <mat-option timeZoneId="13" gmtAdjustment="GMT-06:00" useDaylightTime="0" value="-6">(GMT-06:00) Saskatchewan</mat-option>
+                                            <mat-option timeZoneId="14" gmtAdjustment="GMT-05:00" useDaylightTime="0" value="-5">(GMT-05:00) Bogota, Lima, Quito, Rio Branco</mat-option>
+                                            <mat-option timeZoneId="15" gmtAdjustment="GMT-05:00" useDaylightTime="1" value="-5">(GMT-05:00) Eastern Time (US & Canada)</mat-option>
+                                            <mat-option timeZoneId="16" gmtAdjustment="GMT-05:00" useDaylightTime="1" value="-5">(GMT-05:00) Indiana (East)</mat-option>
+                                            <mat-option timeZoneId="17" gmtAdjustment="GMT-04:00" useDaylightTime="1" value="-4">(GMT-04:00) Atlantic Time (Canada)</mat-option>
+                                            <mat-option timeZoneId="18" gmtAdjustment="GMT-04:00" useDaylightTime="0" value="-4">(GMT-04:00) Caracas, La Paz</mat-option>
+                                            <mat-option timeZoneId="19" gmtAdjustment="GMT-04:00" useDaylightTime="0" value="-4">(GMT-04:00) Manaus</mat-option>
+                                            <mat-option timeZoneId="20" gmtAdjustment="GMT-04:00" useDaylightTime="1" value="-4">(GMT-04:00) Santiago</mat-option>
+                                            <mat-option timeZoneId="21" gmtAdjustment="GMT-03:30" useDaylightTime="1" value="-3.5">(GMT-03:30) Newfoundland</mat-option>
+                                            <mat-option timeZoneId="22" gmtAdjustment="GMT-03:00" useDaylightTime="1" value="-3">(GMT-03:00) Brasilia</mat-option>
+                                            <mat-option timeZoneId="23" gmtAdjustment="GMT-03:00" useDaylightTime="0" value="-3">(GMT-03:00) Buenos Aires, Georgetown</mat-option>
+                                            <mat-option timeZoneId="24" gmtAdjustment="GMT-03:00" useDaylightTime="1" value="-3">(GMT-03:00) Greenland</mat-option>
+                                            <mat-option timeZoneId="25" gmtAdjustment="GMT-03:00" useDaylightTime="1" value="-3">(GMT-03:00) Montevideo</mat-option>
+                                            <mat-option timeZoneId="26" gmtAdjustment="GMT-02:00" useDaylightTime="1" value="-2">(GMT-02:00) Mid-Atlantic</mat-option>
+                                            <mat-option timeZoneId="27" gmtAdjustment="GMT-01:00" useDaylightTime="0" value="-1">(GMT-01:00) Cape Verde Is.</mat-option>
+                                            <mat-option timeZoneId="28" gmtAdjustment="GMT-01:00" useDaylightTime="1" value="-1">(GMT-01:00) Azores</mat-option>
+                                            <mat-option timeZoneId="29" gmtAdjustment="GMT+00:00" useDaylightTime="0" value="0">(GMT+00:00) Casablanca, Monrovia, Reykjavik</mat-option>
+                                            <mat-option timeZoneId="30" gmtAdjustment="GMT+00:00" useDaylightTime="1" value="0">(GMT+00:00) Greenwich Mean Time : Dublin, Edinburgh, Lisbon, London</mat-option>
+                                            <mat-option timeZoneId="31" gmtAdjustment="GMT+01:00" useDaylightTime="1" value="1">(GMT+01:00) Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna</mat-option>
+                                            <mat-option timeZoneId="32" gmtAdjustment="GMT+01:00" useDaylightTime="1" value="1">(GMT+01:00) Belgrade, Bratislava, Budapest, Ljubljana, Prague</mat-option>
+                                            <mat-option timeZoneId="33" gmtAdjustment="GMT+01:00" useDaylightTime="1" value="1">(GMT+01:00) Brussels, Copenhagen, Madrid, Paris</mat-option>
+                                            <mat-option timeZoneId="34" gmtAdjustment="GMT+01:00" useDaylightTime="1" value="1">(GMT+01:00) Sarajevo, Skopje, Warsaw, Zagreb</mat-option>
+                                            <mat-option timeZoneId="35" gmtAdjustment="GMT+01:00" useDaylightTime="1" value="1">(GMT+01:00) West Central Africa</mat-option>
+                                            <mat-option timeZoneId="36" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="2">(GMT+02:00) Amman</mat-option>
+                                            <mat-option timeZoneId="37" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="2">(GMT+02:00) Athens, Bucharest, Istanbul</mat-option>
+                                            <mat-option timeZoneId="38" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="2">(GMT+02:00) Beirut</mat-option>
+                                            <mat-option timeZoneId="39" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="2">(GMT+02:00) Cairo</mat-option>
+                                            <mat-option timeZoneId="40" gmtAdjustment="GMT+02:00" useDaylightTime="0" value="2">(GMT+02:00) Harare, Pretoria</mat-option>
+                                            <mat-option timeZoneId="41" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="2">(GMT+02:00) Helsinki, Kyiv, Riga, Sofia, Tallinn, Vilnius</mat-option>
+                                            <mat-option timeZoneId="42" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="2">(GMT+02:00) Jerusalem</mat-option>
+                                            <mat-option timeZoneId="43" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="2">(GMT+02:00) Minsk</mat-option>
+                                            <mat-option timeZoneId="44" gmtAdjustment="GMT+02:00" useDaylightTime="1" value="2">(GMT+02:00) Windhoek</mat-option>
+                                            <mat-option timeZoneId="45" gmtAdjustment="GMT+03:00" useDaylightTime="0" value="3">(GMT+03:00) Kuwait, Riyadh, Baghdad</mat-option>
+                                            <mat-option timeZoneId="46" gmtAdjustment="GMT+03:00" useDaylightTime="1" value="3">(GMT+03:00) Moscow, St. Petersburg, Volgograd</mat-option>
+                                            <mat-option timeZoneId="47" gmtAdjustment="GMT+03:00" useDaylightTime="0" value="3">(GMT+03:00) Nairobi</mat-option>
+                                            <mat-option timeZoneId="48" gmtAdjustment="GMT+03:00" useDaylightTime="0" value="3">(GMT+03:00) Tbilisi</mat-option>
+                                            <mat-option timeZoneId="49" gmtAdjustment="GMT+03:30" useDaylightTime="1" value="3.5">(GMT+03:30) Tehran</mat-option>
+                                            <mat-option timeZoneId="50" gmtAdjustment="GMT+04:00" useDaylightTime="0" value="4">(GMT+04:00) Abu Dhabi, Muscat</mat-option>
+                                            <mat-option timeZoneId="51" gmtAdjustment="GMT+04:00" useDaylightTime="1" value="4">(GMT+04:00) Baku</mat-option>
+                                            <mat-option timeZoneId="52" gmtAdjustment="GMT+04:00" useDaylightTime="1" value="4">(GMT+04:00) Yerevan</mat-option>
+                                            <mat-option timeZoneId="53" gmtAdjustment="GMT+04:30" useDaylightTime="0" value="4.5">(GMT+04:30) Kabul</mat-option>
+                                            <mat-option timeZoneId="54" gmtAdjustment="GMT+05:00" useDaylightTime="1" value="5">(GMT+05:00) Yekaterinburg</mat-option>
+                                            <mat-option timeZoneId="55" gmtAdjustment="GMT+05:00" useDaylightTime="0" value="5">(GMT+05:00) Islamabad, Karachi, Tashkent</mat-option>
+                                            <mat-option timeZoneId="56" gmtAdjustment="GMT+05:30" useDaylightTime="0" value="5.5">(GMT+05:30) Sri Jayawardenapura</mat-option>
+                                            <mat-option timeZoneId="57" gmtAdjustment="GMT+05:30" useDaylightTime="0" value="5.5">(GMT+05:30) Chennai, Kolkata, Mumbai, New Delhi</mat-option>
+                                            <mat-option timeZoneId="58" gmtAdjustment="GMT+05:45" useDaylightTime="0" value="5.75">(GMT+05:45) Kathmandu</mat-option>
+                                            <mat-option timeZoneId="59" gmtAdjustment="GMT+06:00" useDaylightTime="1" value="6">(GMT+06:00) Almaty, Novosibirsk</mat-option>
+                                            <mat-option timeZoneId="60" gmtAdjustment="GMT+06:00" useDaylightTime="0" value="6">(GMT+06:00) Astana, Dhaka</mat-option>
+                                            <mat-option timeZoneId="61" gmtAdjustment="GMT+06:30" useDaylightTime="0" value="6.5">(GMT+06:30) Yangon (Rangoon)</mat-option>
+                                            <mat-option timeZoneId="62" gmtAdjustment="GMT+07:00" useDaylightTime="0" value="7">(GMT+07:00) Bangkok, Hanoi, Jakarta</mat-option>
+                                            <mat-option timeZoneId="63" gmtAdjustment="GMT+07:00" useDaylightTime="1" value="7">(GMT+07:00) Krasnoyarsk</mat-option>
+                                            <mat-option timeZoneId="64" gmtAdjustment="GMT+08:00" useDaylightTime="0" value="8">(GMT+08:00) Beijing, Chongqing, Hong Kong, Urumqi</mat-option>
+                                            <mat-option timeZoneId="65" gmtAdjustment="GMT+08:00" useDaylightTime="0" value="8">(GMT+08:00) Kuala Lumpur, Singapore</mat-option>
+                                            <mat-option timeZoneId="66" gmtAdjustment="GMT+08:00" useDaylightTime="0" value="8">(GMT+08:00) Irkutsk, Ulaan Bataar</mat-option>
+                                            <mat-option timeZoneId="67" gmtAdjustment="GMT+08:00" useDaylightTime="0" value="8">(GMT+08:00) Perth</mat-option>
+                                            <mat-option timeZoneId="68" gmtAdjustment="GMT+08:00" useDaylightTime="0" value="8">(GMT+08:00) Taipei</mat-option>
+                                            <mat-option timeZoneId="69" gmtAdjustment="GMT+09:00" useDaylightTime="0" value="9">(GMT+09:00) Osaka, Sapporo, Tokyo</mat-option>
+                                            <mat-option timeZoneId="70" gmtAdjustment="GMT+09:00" useDaylightTime="0" value="9">(GMT+09:00) Seoul</mat-option>
+                                            <mat-option timeZoneId="71" gmtAdjustment="GMT+09:00" useDaylightTime="1" value="9">(GMT+09:00) Yakutsk</mat-option>
+                                            <mat-option timeZoneId="72" gmtAdjustment="GMT+09:30" useDaylightTime="0" value="9.5">(GMT+09:30) Adelaide</mat-option>
+                                            <mat-option timeZoneId="73" gmtAdjustment="GMT+09:30" useDaylightTime="0" value="9.5">(GMT+09:30) Darwin</mat-option>
+                                            <mat-option timeZoneId="74" gmtAdjustment="GMT+10:00" useDaylightTime="0" value="10">(GMT+10:00) Brisbane</mat-option>
+                                            <mat-option timeZoneId="75" gmtAdjustment="GMT+10:00" useDaylightTime="1" value="10">(GMT+10:00) Canberra, Melbourne, Sydney</mat-option>
+                                            <mat-option timeZoneId="76" gmtAdjustment="GMT+10:00" useDaylightTime="1" value="10">(GMT+10:00) Hobart</mat-option>
+                                            <mat-option timeZoneId="77" gmtAdjustment="GMT+10:00" useDaylightTime="0" value="10">(GMT+10:00) Guam, Port Moresby</mat-option>
+                                            <mat-option timeZoneId="78" gmtAdjustment="GMT+10:00" useDaylightTime="1" value="10">(GMT+10:00) Vladivostok</mat-option>
+                                            <mat-option timeZoneId="79" gmtAdjustment="GMT+11:00" useDaylightTime="1" value="11">(GMT+11:00) Magadan, Solomon Is., New Caledonia</mat-option>
+                                            <mat-option timeZoneId="80" gmtAdjustment="GMT+12:00" useDaylightTime="1" value="12">(GMT+12:00) Auckland, Wellington</mat-option>
+                                            <mat-option timeZoneId="81" gmtAdjustment="GMT+12:00" useDaylightTime="0" value="12">(GMT+12:00) Fiji, Kamchatka, Marshall Is.</mat-option>
+                                            <mat-option timeZoneId="82" gmtAdjustment="GMT+13:00" useDaylightTime="0" value="13">(GMT+13:00) Nuku'alofa</mat-option>
+                                        </mat-select>											
+                                                        
+                                <mat-error>
+                                    TimeZone is required
+                                </mat-error>
+                              </mat-form-field>
+                        </mat-grid-tile>
+                        <mat-grid-tile>
+                            <mat-form-field appearance="outline" [ngStyle]="{'font-size.px': 12}">
+                                    <mat-select  placeholder="Currency" formControlName="firstCtrl" required>
+                                            <mat-option  value="USD United States Dollars">
+                                                USD United States Dollars
+                                            </mat-option>
+                                            <mat-option>
+                                                EUR Euro
+                                            </mat-option>
+                                            <mat-option value="CAD Canada Dollars">
+                                                CAD Canada Dollars
+                                            </mat-option>
+                                            <mat-option>
+                                                GBP United Kingdom Pounds
+                                            </mat-option>
+                                            <mat-option>
+                                                DEM Germany Deutsche Marks
+                                            </mat-option>
+                                            <mat-option>
+                                                FRF France Francs
+                                            </mat-option>
+                                            <mat-option>
+                                                JPY Japan Yen
+                                            </mat-option>
+                                            <mat-option>
+                                                NLG Netherlands Guilders
+                                            </mat-option>
+                                            <mat-option>
+                                                ITL Italy Lira
+                                            </mat-option>
+                                            <mat-option>
+                                                CHF Switzerland Francs
+                                            </mat-option>
+                                            <mat-option>
+                                                DZD Algeria Dinars
+                                            </mat-option>
+                                            <mat-option>
+                                                ARP Argentina Pesos
+                                            </mat-option>
+                                            <mat-option>
+                                                AUD Australia Dollars
+                                            </mat-option>
+                                            <mat-option>
+                                                ATS Austria Schillings
+                                            </mat-option>
+                                            <mat-option>
+                                                BSD Bahamas Dollars
+                                            </mat-option>
+                                            <mat-option>
+                                                BBD Barbados Dollars
+                                            </mat-option>
+                                            <mat-option>
+                                                BEF Belgium Francs
+                                            </mat-option>
+                                            <mat-option>
+                                                BMD Bermuda Dollars
+                                            </mat-option>
+                                            <mat-option>
+                                                BRR Brazil Real
+                                            </mat-option>
+                                            <mat-option>
+                                                BGL Bulgaria Lev
+                                            </mat-option>
+                                            <mat-option>
+                                                CAD Canada Dollars
+                                            </mat-option>
+                                            <mat-option>
+                                                CLP Chile Pesos
+                                            </mat-option>
+                                            <mat-option>
+                                                CNY China Yuan Renmimbi
+                                            </mat-option>
+                                            <mat-option>
+                                                CYP Cyprus Pounds
+                                            </mat-option>
+                                            <mat-option>
+                                                CSK Czech Republic Koruna
+                                            </mat-option>
+                                            <mat-option>
+                                                DKK Denmark Kroner
+                                            </mat-option>
+                                            <mat-option>
+                                                NLG Dutch Guilders
+                                            </mat-option>
+                                            <mat-option>
+                                                XCD Eastern Caribbean Dollars
+                                            </mat-option>
+                                            <mat-option>
+                                                EGP Egypt Pounds
+                                            </mat-option>
+                                            <mat-option>
+                                                EUR Euro
+                                            </mat-option>
+                                            <mat-option>
+                                                FJD Fiji Dollars
+                                            </mat-option>
+                                            <mat-option>
+                                                FIM Finland Markka
+                                            </mat-option>
+                                            <mat-option>
+                                                FRF France Francs
+                                            </mat-option>
+                                            <mat-option>
+                                                DEM Germany Deutsche Marks
+                                            </mat-option>
+                                            <mat-option>
+                                                XAU Gold Ounces
+                                            </mat-option>
+                                            <mat-option>
+                                                GRD Greece Drachmas
+                                            </mat-option>
+                                            <mat-option>
+                                                HKD Hong Kong Dollars
+                                            </mat-option>
+                                            <mat-option>
+                                                HUF Hungary Forint
+                                            </mat-option>
+                                            <mat-option>
+                                                ISK Iceland Krona
+                                            </mat-option>
+                                            <mat-option mat-selected="mat-selected">
+                                                INR India Rupees
+                                            </mat-option>
+                                            <mat-option>
+                                                IDR Indonesia Rupiah
+                                            </mat-option>
+                                            <mat-option>
+                                                IEP Ireland Punt
+                                            </mat-option>
+                                            <mat-option>
+                                                ILS Israel New Shekels
+                                            </mat-option>
+                                            <mat-option>
+                                                ITL Italy Lira
+                                            </mat-option>
+                                            <mat-option>
+                                                JMD Jamaica Dollars
+                                            </mat-option>
+                                            <mat-option>
+                                                JPY Japan Yen
+                                            </mat-option>
+                                            <mat-option>
+                                                JOD Jordan Dinar
+                                            </mat-option>
+                                            <mat-option>
+                                                KRW Korea (South) Won
+                                            </mat-option>
+                                            <mat-option>
+                                                LBP Lebanon Pounds
+                                            </mat-option>
+                                            <mat-option>
+                                                LUF Luxembourg Francs
+                                            </mat-option>
+                                            <mat-option>
+                                                MYR Malaysia Ringgit
+                                            </mat-option>
+                                            <mat-option>
+                                                MXP Mexico Pesos
+                                            </mat-option>
+                                            <mat-option>
+                                                NLG Netherlands Guilders
+                                            </mat-option>
+                                            <mat-option>
+                                                NZD New Zealand Dollars
+                                            </mat-option>
+                                            <mat-option>
+                                                NOK Norway Kroner
+                                            </mat-option>
+                                            <mat-option>
+                                                PKR Pakistan Rupees
+                                            </mat-option>
+                                            <mat-option>
+                                                XPD Palladium Ounces
+                                            </mat-option>
+                                            <mat-option>
+                                                PHP Philippines Pesos
+                                            </mat-option>
+                                            <mat-option>
+                                                XPT Platinum Ounces
+                                            </mat-option>
+                                            <mat-option>
+                                                PLZ Poland Zloty
+                                            </mat-option>
+                                            <mat-option>
+                                                PTE Portugal Escudo
+                                            </mat-option>
+                                            <mat-option>
+                                                ROL Romania Leu
+                                            </mat-option>
+                                            <mat-option>
+                                                RUR Russia Rubles
+                                            </mat-option>
+                                            <mat-option>
+                                                SAR Saudi Arabia Riyal
+                                            </mat-option>
+                                            <mat-option>
+                                                XAG Silver Ounces
+                                            </mat-option>
+                                            <mat-option>
+                                                SGD Singapore Dollars
+                                            </mat-option>
+                                            <mat-option>
+                                                SKK Slovakia Koruna
+                                            </mat-option>
+                                            <mat-option>
+                                                ZAR South Africa Rand
+                                            </mat-option>
+                                            <mat-option>
+                                                KRW South Korea Won
+                                            </mat-option>
+                                            <mat-option>
+                                                ESP Spain Pesetas
+                                            </mat-option>
+                                            <mat-option>
+                                                XDR Special Drawing Right (IMF)
+                                            </mat-option>
+                                            <mat-option>
+                                                SDD Sudan Dinar
+                                            </mat-option>
+                                            <mat-option>
+                                                SEK Sweden Krona
+                                            </mat-option>
+                                            <mat-option>
+                                                CHF Switzerland Francs
+                                            </mat-option>
+                                            <mat-option>
+                                                TWD Taiwan Dollars
+                                            </mat-option>
+                                            <mat-option>
+                                                THB Thailand Baht
+                                            </mat-option>
+                                            <mat-option>
+                                                TTD Trinidad and Tobago Dollars
+                                            </mat-option>
+                                            <mat-option>
+                                                TRL Turkey Lira
+                                            </mat-option>
+                                            <mat-option>
+                                                GBP United Kingdom Pounds
+                                            </mat-option>
+                                            <mat-option>
+                                                USD United States Dollars
+                                            </mat-option>
+                                            <mat-option>
+                                                VEB Venezuela Bolivar
+                                            </mat-option>
+                                            <mat-option>
+                                                ZMK Zambia Kwacha
+                                            </mat-option>
+                                            <mat-option>
+                                                EUR Euro
+                                            </mat-option>
+                                            <mat-option>
+                                                XCD Eastern Caribbean Dollars
+                                            </mat-option>
+                                            <mat-option>
+                                                XDR Special Drawing Right (IMF)
+                                            </mat-option>
+                                            <mat-option>
+                                                XAG Silver Ounces
+                                            </mat-option>
+                                            <mat-option>
+                                                XAU Gold Ounces
+                                            </mat-option>
+                                            <mat-option>
+                                                XPD Palladium Ounces
+                                            </mat-option>
+                                            <mat-option>
+                                                XPT Platinum Ounces
+                                            </mat-option>
+                                        </mat-select>
+                                <mat-error>
+                                    Currency is required
+                                </mat-error>
+                              </mat-form-field>
+                        </mat-grid-tile>
+                      </mat-grid-list>-->
+
                   
                     <div>
                    
@@ -53,26 +784,21 @@
                   <form [formGroup]="secondFormGroup">
                    
                     <mat-form-field appearance="outline" [ngStyle]="{'font-size.px': 12}">
-                        <mat-label>Email</mat-label>
-                        <input matInput formControlName="secondCtrl">
-                        <mat-icon matSuffix class="secondary-text">mail</mat-icon>
-                        <mat-error *ngIf="registerForm.get('email').hasError('required')">
-                            Email is required
-                        </mat-error>
-                        <mat-error *ngIf="registerForm.get('email').hasError('email')">
-                            Please enter a valid email address
-                        </mat-error>
-                    </mat-form-field>
-                    <mat-form-field appearance="outline" [ngStyle]="{'font-size.px': 12}">
-                        <mat-label>Mobile No.</mat-label>
-                        <input matInput type="password" formControlName="secondCtrl">
-                        <mat-icon matSuffix class="secondary-text">mobile_friendly</mat-icon>
-                        <mat-error>
-                            Mobile no. is required
-                        </mat-error>
-                    </mat-form-field>
+                        <input matInput placeholder="Your Site Name" formControlName="secondCtrl" required>
+                        <span matSuffix>.encephalon.com</span>
+                        
+                      </mat-form-field>
+                      <mat-form-field appearance="outline" [ngStyle]="{'font-size.px': 12}">
+                        <input matInput placeholder="No. of users" formControlName="secondCtrl" required>
+                       
+                        
+                      </mat-form-field>
                    
+                      <div>
                    
+                            <button mat-raised-button matStepperPrevious class="submit-button">Back</button>
+                          
+                                      </div>
                     <div class="terms" fxLayout="row" fxLayoutAlign="center center">
                         <mat-checkbox name="terms" aria-label="I read and accept" required>
                             <span>I read and accept</span>
@@ -80,7 +806,7 @@
                         <a href="#">terms and conditions</a>
                     </div>
     
-                    <button mat-raised-button color="accent" class="submit-button" aria-label="CREATE AN ACCOUNT"
+                    <button mat-raised-button matStepperNext color="accent" class="submit-button" 
                            >
                         CREATE AN ACCOUNT
                     </button>
@@ -90,12 +816,37 @@
                    
                   </form>
                 </mat-step>
-               
+                <mat-step [stepControl]="thirdFormGroup">
+                    <h3><b>Verify your mail..</b></h3>
+                    <form [formGroup]="thirdFormGroup">
+                    <p>You will receive a Verification Code at registered email, asking you to verify this account request.</p>
+                  
+                     
+                      <mat-form-field appearance="outline" [ngStyle]="{'font-size.px': 12}">
+                          <input matInput placeholder="Verification code" formControlName="thirdCtrl" required>
+                        
+                          
+                        </mat-form-field>
+                        <button mat-raised-button  color="accent" class="submit-button" 
+                        >
+                     Verify
+                 </button>
+                 <div>
+                   
+                        <button mat-raised-button  class="submit-button">Resend Verification code</button>
+                      
+                                  </div>
+                                  <p><b>Note:</b><br />
+                                    It may take a few minutes before you receive this email. If you don't find it, please check your SPAM folder.
+                                </p>
+                        </form>
+                        </mat-step>
               </mat-horizontal-stepper>
 
             <div class="register" fxLayout="column" fxLayoutAlign="center center">
                 <span class="text">Already have an account?</span>
-                <a class="link" [routerLink]="'/ui/page-layouts/login'">Login</a>
+                <a routerLink="/ui/page-layouts/login"><b>Sign In</b></a>
+              
             </div>
 
         </div>

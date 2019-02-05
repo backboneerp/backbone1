@@ -185,7 +185,7 @@ export class FuseThemeOptionsComponent implements OnInit, OnDestroy
                     layout: {
                         width    : 'fullwidth',
                         navbar   : {
-                            primaryBackground  : 'fuse-navy-700',
+                            primaryBackground  : 'linear-gradient(to right, #0072ff, #00c6ff)',
                             secondaryBackground: 'fuse-navy-900',
                             folded             : false,
                             hidden             : false,
@@ -293,7 +293,7 @@ export class FuseThemeOptionsComponent implements OnInit, OnDestroy
                     layout: {
                         width    : 'fullwidth',
                         navbar   : {
-                            primaryBackground  : 'fuse-navy-700',
+                            primaryBackground  : 'linear-gradient(to right, #0072ff, #00c6ff)',
                             secondaryBackground: 'fuse-navy-900',
                             folded             : false,
                             hidden             : false,

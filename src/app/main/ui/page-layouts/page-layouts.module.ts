@@ -7,6 +7,7 @@ import { FuseDemoModule } from '@fuse/components/demo/demo.module';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatStepperModule} from '@angular/material/stepper';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import{MatSelectModule} from '@angular/material/select';
 
 import { CardedFullWidth1Component } from 'app/main/ui/page-layouts/carded/full-width-1/full-width-1.component';
 import { CardedFullWidth2Component } from 'app/main/ui/page-layouts/carded/full-width-2/full-width-2.component';
@@ -241,7 +242,7 @@ const routes: Routes = [
         component: SocietyComponent
     },
     {
-        path     : 'page-layouts/sign_in',
+        path     : 'page-layouts/login',
         component: LoginComponent
     },
     {
@@ -331,6 +332,7 @@ const routes: Routes = [
 
         MatButtonModule,
         MatDatepickerModule,
+        MatSelectModule,
         MatStepperModule,
         MatIconModule,
         MatTabsModule,

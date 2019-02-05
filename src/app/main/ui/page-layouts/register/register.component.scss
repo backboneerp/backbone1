@@ -18,9 +18,10 @@ register {
             #register-form {
                 width: 500px;
                
-                padding: 50px;
+                padding: 30px;
                 text-align: center;
-                @include mat-elevation(16);
+                box-shadow: none;
+                border: 1px solid gray;
 
                 @include media-breakpoint('xs') {
                     padding: 24px;
@@ -159,3 +160,4 @@ text-align: center;
   .example-container > * {
     width: 100%;
   }
+ .placeholder{font-weight: bold;}

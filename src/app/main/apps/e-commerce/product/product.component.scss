@@ -1,7 +1,7 @@
 #product {
 
     .header {
-
+background-color: white;
         .product-image {
             overflow: hidden;
             width: 56px;
@@ -35,11 +35,12 @@
 
         .mat-tab-body-content {
             display: flex;
-            width:600px;
+            width:100%;
         }
 
         .mat-tab-label {
             height: 64px;
+            font-weight: bold;
         }
 
         .product-image {
@@ -65,4 +66,18 @@
     }
 
 }
-.mat-tab-label{font-weight: bold;}
+.mat-tab-label{font-weight: bold; font-size: 14px}
+.example-radio-group {
+    display: inline-flex;
+    flex-direction: column;
+  }
+  
+  .example-radio-button {
+    margin: 5px;
+  }
+  
+  .example-selected-value {
+    margin: 15px 0;
+  }.mat-radio-button ~ .mat-radio-button {
+    margin-left: 16px;
+  }
