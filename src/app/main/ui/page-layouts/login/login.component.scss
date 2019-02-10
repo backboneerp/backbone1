@@ -6,7 +6,7 @@ login {
         width: 100%;
        background-color: white;
         background-size: cover;
-
+        box-shadow:none;
         #login-form-wrapper {
             flex: 1 0 auto;
             padding: 32px;
@@ -19,8 +19,8 @@ login {
                 width: 500px;
                
                 padding: 30px;
-                text-align: center;
-                box-shadow: none;
+                text-align:center;
+                box-shadow:none;
                 border: 1px solid gray;
                 @include mat-elevation(16);
 

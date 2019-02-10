@@ -9,6 +9,7 @@ import { UIPageLayoutsModule } from 'app/main/ui/page-layouts/page-layouts.modul
 import { UIColorsModule } from 'app/main/ui/colors/colors.module';
 import {MatStepperModule} from '@angular/material/stepper';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatRadioModule} from '@angular/material/radio';
 
 @NgModule({
     imports: [
@@ -20,7 +21,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
         UIPageLayoutsModule,
         UIColorsModule,
         MatStepperModule,
-        MatFormFieldModule
+        MatFormFieldModule,
+        MatRadioModule
     ]
 })
 export class UIModule

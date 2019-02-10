@@ -23,6 +23,7 @@ import { LayoutModule } from 'app/layout/layout.module';
 import {MatStepperModule} from '@angular/material/stepper';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
+import {MatRadioModule} from '@angular/material/radio';
 
 const appRoutes: Routes = [
     {
@@ -83,6 +84,7 @@ const appRoutes: Routes = [
         FuseThemeOptionsModule,
         MatStepperModule,
         MatInputModule,
+        MatRadioModule,
 
         // App modules
         LayoutModule,
